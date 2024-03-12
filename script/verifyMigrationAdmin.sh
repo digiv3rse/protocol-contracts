@@ -1,0 +1,9 @@
+ADMIN_TO_VERIFY=$1
+DIGIHUB="0xd53B6196F526b2cf0a5F3a35a03B23B2D02b26c4"
+STORAGE_SLOT=29
+
+SLOT=$(cast abi-encode "a(address,uint256)" $ADMIN_TO_VERIFY $STORAGE_SLOT)
+
+KECCAK_HASH=$(cast keccak $SLOT)
+
+cast storage --rpc-url mumbai $DIGIHUB $KECCAK_HASH

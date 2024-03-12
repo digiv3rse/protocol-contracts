@@ -1,0 +1,82 @@
+[profile.default]
+src = 'contracts'
+out = 'out'
+libs = ['node_modules', 'lib']
+test = 'test'
+cache_path = 'cache_forge'
+fs_permissions = [
+  { access = "read-write", path = "./" },
+  { access = "write", path = "./svgs" },
+]
+
+solc_version = '0.8.21'
+evm_version = 'paris'
+optimizer = true
+optimizer_runs = 10
+ignored_error_codes = []
+no_match_path = "script/svg/*"
+
+# via_ir = true
+
+libraries = [
+  'contracts/libraries/ActionLib.sol:ActionLib:0xbcF556476d15b5EB8d6356c73CB10EE615DdB889',
+  'contracts/libraries/FollowLib.sol:FollowLib:0x1592aDeb7De6a83dCe934356584277B49bcf73A6',
+  'contracts/libraries/GovernanceLib.sol:GovernanceLib:0xA420ff473c97aC27F47e4490B4009515B99ac200',
+  'contracts/libraries/LegacyCollectLib.sol:LegacyCollectLib:0x9C1Fb3c3e570D28eB1C7BC81Fbdd9f190768640B',
+  'contracts/libraries/MetaTxLib.sol:MetaTxLib:0x1F92420bC86799919fdDcc0C660C1C36ED8F60Ca',
+  'contracts/libraries/MigrationLib.sol:MigrationLib:0x1Bb8EFE7AF7Cb333F94FB46FB6De73812899B833',
+  'contracts/libraries/ProfileLib.sol:ProfileLib:0xA3D878EA3a10fDd20ebFDbf780683435645e7aDA',
+  'contracts/libraries/PublicationLib.sol:PublicationLib:0xc4E21ef9636F9e1448A1500ADce25cA83175F660',
+  'contracts/libraries/ValidationLib.sol:ValidationLib:0xCDdd1B99C34080771B337b7f98ac6840bcC8bc61',
+  "contracts/libraries/svgs/Follow/FollowSVG.sol:FollowSVG:0xA9Ed9Fdd9ecF109BC9d38Fc6684f7E792b7848a1",
+  "contracts/libraries/svgs/Handle/GintoNordFontSVG.sol:GintoNordFontSVG:0xd5dd2882e730896F2eeBac78E3eC426C9b252a43",
+  "contracts/libraries/svgs/Handle/HandleSVG.sol:HandleSVG:0xAFa185536c7Eb41472129e1592001A6Dafe2c04A",
+  "contracts/libraries/svgs/Profile/Body/BodyHoodie.sol:BodyHoodie:0x07B188A9F6d0B665A352f314053A31FbdDbc1C4a",
+  "contracts/libraries/svgs/Profile/Body/BodyJacket.sol:BodyJacket:0xC1E70348F316b01E20eF8591201b49089876aF72",
+  "contracts/libraries/svgs/Profile/Body/BodyTShirt.sol:BodyTShirt:0xB33f4fe0B69cef5031B96B3d96BF50863f8556Ff",
+  "contracts/libraries/svgs/Profile/Body/BodyTanktop.sol:BodyTanktop:0x950cE8d14C68bFb0700e19c9004805CD1865A24e",
+  "contracts/libraries/svgs/Profile/Body.sol:Body:0xCf44b720F231c9a624fA0172779794F44e466De9",
+  "contracts/libraries/svgs/Profile/Face.sol:Face:0xBe9358de9D0F4f9d6e4a983956D07592999cbb51",
+  "contracts/libraries/svgs/Profile/Hands.sol:Hands:0xEaA1ee1669a951A3C2aFD41c62000c248b3C68d4",
+  "contracts/libraries/svgs/Profile/Head.sol:Head:0xF66FC9F13DE05A4b705D3B0c5842668Dd89563B4",
+  "contracts/libraries/svgs/Profile/Headwear/HeadwearBeanie.sol:HeadwearBeanie:0xC91fd797BC6B05080b2095e67E53b90a1ADe052C",
+  "contracts/libraries/svgs/Profile/Headwear/HeadwearCrown.sol:HeadwearCrown:0x5731dDF4E2Bb74cd0BcbaB0D8fc77166A21e9A80",
+  "contracts/libraries/svgs/Profile/Headwear/HeadwearFloral.sol:HeadwearFloral:0x82772DF8c0F986db46f93DeeAa1aaaA205195090",
+  "contracts/libraries/svgs/Profile/Headwear/HeadwearGlasses.sol:HeadwearGlasses:0xE04E6b88D58f4923E2157028F90E4d1A551293BD",
+  "contracts/libraries/svgs/Profile/Headwear/HeadwearHat.sol:HeadwearHat:0x4AEB6095Fa2Df49757A47a0F811E5D1cCc7BE1bD",
+  "contracts/libraries/svgs/Profile/Headwear/HeadwearIcecream.sol:HeadwearIcecream:0x2317523e931b6AF780E3C18ce78393b1E0d14360",
+  "contracts/libraries/svgs/Profile/Headwear/HeadwearLeafs.sol:HeadwearLeafs:0x2703EB2C0c689189dEaC6c67F2bC73a165937C4C",
+  "contracts/libraries/svgs/Profile/Headwear/HeadwearMushroom.sol:HeadwearMushroom:0xfc67D9aFE9700eFf5B92C40952C16f813cB047C2",
+  "contracts/libraries/svgs/Profile/Headwear/HeadwearNightcap.sol:HeadwearNightcap:0x6ed9638069d18eF2aAADB663099bff68eFec7a32",
+  "contracts/libraries/svgs/Profile/Headwear/HeadwearPartyhat.sol:HeadwearPartyhat:0x360989785488abC560373BCDD844b2F2f07E5349",
+  "contracts/libraries/svgs/Profile/Headwear/HeadwearPlants.sol:HeadwearPlants:0x839d7d843A877c9a5783f79Eda7ae6BDDAfbC224",
+  "contracts/libraries/svgs/Profile/Headwear/HeadwearSparkles.sol:HeadwearSparkles:0x117c05D9C69726D44F26bf989434d3D7F695B4C8",
+  "contracts/libraries/svgs/Profile/Headwear.sol:Headwear:0x0C61266e8F1EF616463AaCB6B499b8291cFf979A",
+  "contracts/libraries/svgs/Profile/Helpers.sol:Helpers:0x0e3952854241980b33975F2664c281b5C5ce327d",
+  "contracts/libraries/svgs/Profile/Legs.sol:Legs:0x1387eC91A53904D77e1e76581D343f6429C0521A",
+  "contracts/libraries/svgs/Profile/Logo.sol:Logo:0x1a502EeD0e5c7F93B7f42E134317DEf7D5EC82E2",
+  "contracts/libraries/svgs/Profile/ProfileSVG.sol:ProfileSVG:0x4d58DE44A1a5D88094e17D2d381797EE4DFd0159",
+  "contracts/libraries/svgs/Profile/Shoes.sol:Shoes:0x0FA5a2C196c17be3E078B489dC8c050170e089a4",
+
+]
+
+[rpc_endpoints]
+polygon = "$POLYGON_RPC_URL}"
+mumbai = "$MUMBAI_RPC_URL}"
+sepolia = "$SEPOLIA_RPC_URL}"
+
+[fuzz]
+runs = 50
+max_test_rejects = 200000
+
+[profile.cibuild]
+via_ir = true
+libraries = []
+
+[profile.citest]
+via_ir = false
+ignored_error_codes = ["license", "code-size"]
+libraries = []
+
+[profile.citest.fuzz]
+runs = 100

@@ -1,0 +1,477 @@
+{
+  "mainnet": {
+    "chainId": 137,
+    "network": "polygon",
+    "DiGiProfilesGuardianTimelock": 604800,
+    "DiGiHandlesGuardianTimelock": 86400,
+    "DiGiHubProxy": "0xdb46d1dc155634fbc732f92e853b10b288ad5a1d",
+    "ModuleGlobals": "0x3Df697FF746a60CBe9ee8D47555c88CB66f03BB9",
+    "ProfileCreator": "0xe7Af8325aA443F7678B651d4f0De23663E818691",
+    "DiGiPeriphery": "0xeff187b4190E551FC25a7fA4dFC6cf7fDeF7194f",
+    "Modules": {
+      "v1": {
+        "collect": [
+          {
+            "name": "FreeCollectModule",
+            "addy": "0x23b9467334bEb345aAa6fd1545538F3d54436e96"
+          },
+          {
+            "name": "FeeCollectModule",
+            "addy": "0x1292E6dF9a4697DAAfDDBD61D5a7545A634af33d"
+          },
+          {
+            "name": "LimitedFeeCollectModule",
+            "addy": "0xEF13EFa565FB29Cd55ECf3De2beb6c69bD988212"
+          },
+          {
+            "name": "TimedFeeCollectModule",
+            "addy": "0xbf4E6C28d7f37C867CE62cf6ccb9efa4C7676F7F"
+          },
+          {
+            "name": "LimitedTimedFeeCollectModule",
+            "addy": "0x7B94f57652cC1e5631532904A4A038435694636b"
+          },
+          {
+            "name": "RevertCollectModule",
+            "addy": "0xa31FF85E840ED117E172BC9Ad89E55128A999205"
+          },
+          {
+            "name": "SimpleFeeCollectModule",
+            "addy": "0x54325d507ed1b3776c146700eff61a98b45aec76"
+          },
+          {
+            "name": "MultirecipientFeeCollectModule",
+            "addy": "0xfa9da21d0a18c7b7de4566481c1e8952371f880a"
+          },
+          {
+            "name": "StepwiseCollectModule",
+            "addy": "0x210c94877dcfceda8238acd382372278844a54d7"
+          },
+          {
+            "name": "ERC4626FeeCollectModule",
+            "addy": "0x394fd100b13197787023ef4cf318cde456545db7"
+          },
+          {
+            "name": "AaveFeeCollectModule",
+            "addy": "0xa94713d0688c8a483c3352635cec4e0ce88d6a29"
+          }
+        ],
+        "follow": [
+          {
+            "name": "FeeFollowModule",
+            "addy": "0x80ae0e6048d6e295Ee6520b07Eb6EC4485193FD6"
+          },
+          {
+            "name": "ProfileFollowModule",
+            "addy": "0x057ccDf5153bE1081830a6C3D507C9dfE1ac8e4E"
+          },
+          {
+            "name": "RevertFollowModule",
+            "addy": "0x6640e4Fb3fd56a6d7DfF3C351dFd9Ab7E57fb769"
+          }
+        ],
+        "reference": [
+          {
+            "name": "TokenGatedReferenceModule",
+            "addy": "0x3d7f4f71a90fe5a9d13fab2716080f2917cf88f3"
+          },
+          {
+            "name": "FollowerOnlyReferenceModule",
+            "addy": "0x17317F96f0C7a845FFe78c60B10aB15789b57Aaa"
+          },
+          {
+            "name": "DegreesOfSeparationReferenceModule",
+            "addy": "0x081a84abf515302a276d98dc551e69f3cc33a833"
+          }
+        ]
+      },
+      "v2": {
+        "follow": [
+          {
+            "name": "FeeFollowModule",
+            "addy": "0xa8f6ba162dB789039D07A4f0ce90b1aE1f46FE8E"
+          },
+          {
+            "name": "RevertFollowModule",
+            "addy": "0x4E2D0157464501C98E781491a9dbC99c2F3fD90f"
+          }
+        ],
+        "act": [
+          {
+            "name": "CollectPublicationAction",
+            "addy": "0x0D90C58cBe787CD70B5Effe94Ce58185D72143fB"
+          }
+        ],
+        "collect": [
+          {
+            "name": "SimpleFeeCollectModule",
+            "addy": "0x060f5448ae8aCF0Bc06D040400c6A89F45b488bb"
+          },
+          {
+            "name": "MultirecipientFeeCollectModule",
+            "addy": "0x50f1D8779078c790b82dE5Aa8d72A841e1CBBbE1"
+          }
+        ],
+        "reference": [
+          {
+            "name": "DegreesOfSeparationReferenceModule",
+            "addy": "0xBe69302b0E3bAc1018B2772A7B26EB2325b3F9C8"
+          },
+          {
+            "name": "FollowerOnlyReferenceModule",
+            "addy": "0x19F8980aF29207bbd7A6D0aD0858d59bd11d4647"
+          }
+        ]
+      }
+    },
+    "Treasury": "0x6b5d40412956b8546bA2210810C100219f7011B6",
+    "TreasuryFee": "0",
+    "LegacyCollectNFTImpl": "0x5886B1Db98a3f5AaFBDeE2DEC4783C6927655B7e",
+    "FollowNFTImpl": "0x288715E67B7b184fD299143280CA6c1Eb7F31e1B",
+    "DiGiHandlesImpl": "0xcE557F3DDfBd1B87074E4386cd98D6B8E80997ED",
+    "DiGiHandles": "0xe7E7EaD361f3AaCD73A61A9bD6C10cA17F38E945",
+    "TokenHandleRegistryImpl": "0x52fa68D73C83df39B9a637F82361d9b70aAb74F4",
+    "TokenHandleRegistry": "0xD4F2F33680FCCb36748FA9831851643781608844",
+    "ModuleRegistryImpl": "0xeD935AcE8f82FcAB4cae41F240c3a4aE51931313",
+    "ModuleRegistry": "0x1eD5983F0c883B96f7C35528a1e22EEA67DE3Ff9",
+    "DiGiHubV2Impl": "0x92fE81FF570869eDE4c90fc5C949bb566b1f52f7",
+    "GovernanceContract": "0xB03B8801cF9D074Ea468aAA8eBd9B5EeD67Ac5B6",
+    "GovernanceContractAdmin": "0xf94b90BbEee30996019bABD12cEcdDCcf68331DE",
+    "ProxyAdminContract": "0x573FDF61727436a38ec6C5f6408B1F50cd69e015",
+    "ProxyAdminContractAdmin": "0xB7589cBf00623b09160aD5F6CA9536C66E0C2ebc",
+    "DiGiV2UpgradeContract": "0xd38c614AD4c09877F3a95Fef2FBf2781b4e9736D",
+    "ProfileCreationProxy": "0xdCB72aaB62d52aBC2E6be99BEEe535C2D1361fc0",
+    "PublicActProxy": "0x53582b1b7BE71622E7386D736b6baf87749B7a2B",
+    "CollectNFT": "0x0c2a7761E2971D906338F5da1ecF0027E4247fd7",
+    "CollectPublicationActionImpl": "0xcc3f120f3d3bf860b910b228d2114f474b382c1d",
+    "LitAccessControlImpl": "0x79dcA158B2A019EA2377f5989066a1ac0aC20e10",
+    "LitAccessControl": "0x98a6C31E43b158198da95Ef1242faCA868424187",
+    "ProfileTokenURI": "0xE01e1017Eb1D49Aa7034628cd2e3021536cdeBE5",
+    "HandleTokenURI": "0x9632dC8eb31CEC8fcd166a99C1Da179716aE2E48",
+    "FollowTokenURI": "0x07D8a9FEdef6DC7004b9ae0935eA178bFa8bBdF1"
+  },
+  "testnet": {
+    "chainId": 80001,
+    "network": "mumbai",
+    "DiGiProfilesGuardianTimelock": 300,
+    "DiGiHandlesGuardianTimelock": 300,
+    "DiGiHubProxy": "0x60Ae865ee4C725cd04353b5AAb364553f56ceF82",
+    "ModuleGlobals": "0x1353aAdfE5FeD85382826757A95DE908bd21C4f9",
+    "ProfileCreator": "0x6C1e1bC39b13f9E0Af9424D76De899203F47755F",
+    "DiGiPeriphery": "0xD5037d72877808cdE7F669563e9389930AF404E8",
+    "Modules": {
+      "v1": {
+        "collect": [
+          {
+            "name": "FreeCollectModule",
+            "addy": "0x0BE6bD7092ee83D44a6eC1D949626FeE48caB30c"
+          },
+          {
+            "name": "FeeCollectModule",
+            "addy": "0xeb4f3EC9d01856Cec2413bA5338bF35CeF932D82"
+          },
+          {
+            "name": "LimitedFeeCollectModule",
+            "addy": "0xFCDA2801a31ba70dfe542793020a934F880D54aB"
+          },
+          {
+            "name": "TimedFeeCollectModule",
+            "addy": "0x36447b496ebc97DDA6d8c8113Fe30A30dC0126Db"
+          },
+          {
+            "name": "LimitedTimedFeeCollectModule",
+            "addy": "0xDa76E44775C441eF53B9c769d175fB2948F15e1C"
+          },
+          {
+            "name": "RevertCollectModule",
+            "addy": "0x5E70fFD2C6D04d65C3abeBa64E93082cfA348dF8"
+          },
+          {
+            "name": "SimpleFeeCollectModule",
+            "addy": "0xb4a9874adc790eec88fd086e43d329bbc9520efd"
+          },
+          {
+            "name": "MultirecipientFeeCollectModule",
+            "addy": "0x99d6c3eabf05435e851c067d2c3222716f7fcfe5"
+          },
+          {
+            "name": "StepwiseCollectModule",
+            "addy": "0x7a7b8e7699e0492da1d3c7eab7e2f3bf1065aa40"
+          },
+          {
+            "name": "ERC4626FeeCollectModule",
+            "addy": "0x79697402bd2caa19a53d615fb1a30a98e35b84d5"
+          },
+          {
+            "name": "AaveFeeCollectModule",
+            "addy": "0x912860ed4ed6160c48a52d52fcab5c059d34fe5a"
+          }
+        ],
+        "follow": [
+          {
+            "name": "FeeFollowModule",
+            "addy": "0xe7AB9BA11b97EAC820DbCc861869092b52B65C06"
+          },
+          {
+            "name": "ProfileFollowModule",
+            "addy": "0x8c32203df6b1A04E25145346e2DaAD0B4712C20D"
+          },
+          {
+            "name": "RevertFollowModule",
+            "addy": "0x8c822Fc029EBdE62Da1Ed1072534c5e112dAE48c"
+          }
+        ],
+        "reference": [
+          {
+            "name": "TokenGatedReferenceModule",
+            "addy": "0xb4ba8dccd35bd3dcc5d58dbb9c7dff9c9268add9"
+          },
+          {
+            "name": "FollowerOnlyReferenceModule",
+            "addy": "0x7Ea109eC988a0200A1F79Ae9b78590F92D357a16"
+          },
+          {
+            "name": "DegreesOfSeparationReferenceModule",
+            "addy": "0xe20D64D25779D2Ae0d76711e5Aca23EE633f2E1E"
+          }
+        ]
+      },
+      "v2": {}
+    }
+  },
+  "sandbox": {
+    "chainId": 80001,
+    "network": "mumbai",
+    "DiGiProfilesGuardianTimelock": 300,
+    "DiGiHandlesGuardianTimelock": 300,
+    "DiGiHubProxy": "0x7582177F9E536aB0b6c721e11f383C326F2Ad1D5",
+    "ProfileCreator": "0x6C1e1bC39b13f9E0Af9424D76De899203F47755F",
+    "DiGiPeriphery": "0xa6bcF4398824A199965f89094796DFCcEa81b1a6",
+    "ModuleGlobals": "0xcbCC5b9611d22d11403373432642Df9Ef7Dd81AD",
+    "PoolAddressesProvider": "0x5343b5bA672Ae99d627A1C87866b8E53F47Db2E6",
+    "MockSandboxGovernance": "0x1677d9cC4861f1C85ac7009d5F06f49c928CA2AD",
+    "Modules": {
+      "v1": {
+        "collect": [
+          {
+            "name": "FreeCollectModule",
+            "addy": "0x11C45Cbc6fDa2dbe435C0079a2ccF9c4c7051595"
+          },
+          {
+            "name": "FeeCollectModule",
+            "addy": "0xE98a40DB1170B3A46ffa7bA84335A0A0e9A65C2d"
+          },
+          {
+            "name": "LimitedFeeCollectModule",
+            "addy": "0x27742f7e82356e1c1e4177C11f627B5Dc18E4686"
+          },
+          {
+            "name": "TimedFeeCollectModule",
+            "addy": "0x6Bf382f52398DAdD3969Fb9C1AB3a1Bab8268F4E"
+          },
+          {
+            "name": "LimitedTimedFeeCollectModule",
+            "addy": "0x75Df383C587B0de2EB00FeA95B9b8e3AF35EbCe6"
+          },
+          {
+            "name": "RevertCollectModule",
+            "addy": "0x75fe7513709E6Ca573d017cE979F7d35192CE0d5"
+          },
+          {
+            "name": "SimpleFeeCollectModule",
+            "addy": "0xb4a9874adc790eec88fd086e43d329bbc9520efd"
+          },
+          {
+            "name": "MultirecipientFeeCollectModule",
+            "addy": "0x99d6c3eabf05435e851c067d2c3222716f7fcfe5"
+          },
+          {
+            "name": "StepwiseCollectModule",
+            "addy": "0x7a7b8e7699e0492da1d3c7eab7e2f3bf1065aa40"
+          },
+          {
+            "name": "ERC4626FeeCollectModule",
+            "addy": "0x79697402bd2caa19a53d615fb1a30a98e35b84d5"
+          },
+          {
+            "name": "AaveFeeCollectModule",
+            "addy": "0x912860ed4ed6160c48a52d52fcab5c059d34fe5a"
+          }
+        ],
+        "follow": [
+          {
+            "name": "FeeFollowModule",
+            "addy": "0xE98a40DB1170B3A46ffa7bA84335A0A0e9A65C2d"
+          },
+          {
+            "name": "ProfileFollowModule",
+            "addy": "0x62D0EcAB45428087d91a94EE33E141B7496Ad7c3"
+          },
+          {
+            "name": "RevertFollowModule",
+            "addy": "0x65004331Ae1c3D35DF81aEC6E8C259167Bbe64E2"
+          }
+        ],
+        "reference": [
+          {
+            "name": "TokenGatedReferenceModule",
+            "addy": "0xb4ba8dccd35bd3dcc5d58dbb9c7dff9c9268add9"
+          },
+          {
+            "name": "FollowerOnlyReferenceModule",
+            "addy": "0xB080AAc00E53FBeb04917F22096721d602c70759"
+          },
+          {
+            "name": "DegreesOfSeparationReferenceModule",
+            "addy": "0xe20D64D25779D2Ae0d76711e5Aca23EE633f2E1E"
+          }
+        ]
+      },
+      "v2": {}
+    }
+  },
+  "devnet": {
+    "chainId": 80001,
+    "network": "mumbai",
+    "DiGiProfilesGuardianTimelock": 300,
+    "DiGiHandlesGuardianTimelock": 300,
+    "DiGiHubProxy": "0xE444E6C7Fa6d21637E2ee724276Ef0b2E9250B1e",
+    "DiGiHubImplementation": "0x82eA94D35C8589357222FE39d22076700a86a576",
+    "ModuleGlobals": "0x2D61Efe6e7c7F696D5e0A6aac43Bd5035F0302B3",
+    "ProfileCreationProxy": "0x334b503E75CD1900F174A0F5Acc01c57C3b8F962",
+    "LegacyRevertCollectModule": "0x4c9a09e4313B3AC6065853A38332fA71C8Fc80Ab",
+    "LegacyFreeCollectModule": "0xc124502653cb0bC5510515Ba63df643366ff6f52",
+    "LegacyFeeFollowModule": "0x03e3d4D799271f0c4287e2bb7050aBE8c8C18d25",
+    "LegacyProfileFollowModule": "0xc809B311994672c4547E80d12fEb757ED9EbBB64",
+    "LegacyMultirecipientFeeCollectModule": "0x1cff6c45b0de2fff70670ef4dc67a92a1ccfe0bb",
+    "LegacyStepwiseCollectModule": "0x6928d6127dfa0da401737e6ff421fcf62d5617a3",
+    "LegacyERC4626FeeCollectModule": "0x31126c602cf88193825a99dcd1d17bf1124b1b4f",
+    "LegacyAaveFeeCollectModule": "0x666e06215747879ee68b3e5a317dcd8411de1897",
+    "LegacyTokenGatedReferenceModule": "0x86d35562ceb9f10d7c2c23c098dfeacb02f53853",
+    "LegacySimpleFeeCollectModule": "0x372443083ecbb3a50b5c0c2f1b30f23a9c41f256",
+    "FollowNFTImpl": "0xF02673CAb69Da82C024267f0D43712Bba066FC56",
+    "DiGiHandlesImpl": "0x8e9d7401379E012bb98846033164B8506f78a895",
+    "DiGiHandles": "0x1D21Ca2BEe708E12419A3e2564668F150817C2A5",
+    "TokenHandleRegistryImpl": "0x7Bf77E1F9E85C6d7437B29Fdfd48Ce41c05129C6",
+    "TokenHandleRegistry": "0x6968000D5c3B2569491706728D59e9a9bBc7f98B",
+    "FeeFollowModule": "0xB5bF585e14b26Ac59eF416e42C422a4a2356bC6B",
+    "DiGiHubV2Impl": "0x530Bc44E8722C61B657f80b74d64BAABD767782B",
+    "GovernanceContract": "0x0Dc07bEB61a71AbD9E156D428D693f7ea24401b3",
+    "ProxyAdminContract": "0xe7975519721fA50999636684439B395651fBb9CA",
+    "DiGiV2UpgradeContract": "0x7daE0aCb7cF72639c4efbBeAB4aA5739745E6812"
+  },
+  "sepolia": {
+    "chainId": 11155111,
+    "network": "sepolia",
+    "DiGiProfilesGuardianTimelock": 604800,
+    "DiGiHandlesGuardianTimelock": 86400,
+    "DiGiHubProxy": "0x6Dc91CcC9C66E970913F0eAcCD8D63F18987234B",
+    "ModuleGlobals": "0x8066108258fFb46a14855A47B76C03730aF835de",
+    "ProfileCreator": "0x2b87AfA1C572cbce9b9195eB3b0864d98284c10D",
+    "DiGiPeriphery": "0x6B672115BC4a5b493463e167cF043441233BC321",
+    "Modules": {
+      "v1": {
+        "collect": [
+          {
+            "name": "FreeCollectModule",
+            "addy": "0xc61579E206249c3F34A089fa599bf498787329b4"
+          },
+          {
+            "name": "FeeCollectModule",
+            "addy": "0xf000e0AE7222813716Db091E2dF3C11F791b94b8"
+          },
+          {
+            "name": "LimitedFeeCollectModule",
+            "addy": "0x2A2aFaF3Dd11B72ceE9E8D447278179A26B1C62c"
+          },
+          {
+            "name": "TimedFeeCollectModule",
+            "addy": "0x92530AbB6301E55e67978636A5ce8eaE6E2ae5a4"
+          },
+          {
+            "name": "LimitedTimedFeeCollectModule",
+            "addy": "0xD376370b2F832D26dB7510DCB41eaeed63999dB3"
+          },
+          {
+            "name": "RevertCollectModule",
+            "addy": "0x6D775b32ea94C7ACd30A556C20f45137babc682C"
+          },
+          {
+            "name": "SimpleFeeCollectModule",
+            "addy": "0x"
+          },
+          {
+            "name": "MultirecipientFeeCollectModule",
+            "addy": "0x"
+          },
+          {
+            "name": "StepwiseCollectModule",
+            "addy": "0x"
+          },
+          {
+            "name": "ERC4626FeeCollectModule",
+            "addy": "0x"
+          },
+          {
+            "name": "AaveFeeCollectModule",
+            "addy": "0x"
+          }
+        ],
+        "follow": [
+          {
+            "name": "FeeFollowModule",
+            "addy": "0xD616ceE62a2F4Bd34D184A1F2fDF32bD88a4AD87"
+          },
+          {
+            "name": "ProfileFollowModule",
+            "addy": "0xdC05Ffaa91DC943D00bf87414C3d6a4e3fd53eAC"
+          },
+          {
+            "name": "RevertFollowModule",
+            "addy": "0x0b75351b7255aC9D0DE271105548fc4A96c603D8"
+          }
+        ],
+        "reference": [
+          {
+            "name": "TokenGatedReferenceModule",
+            "addy": "0x"
+          },
+          {
+            "name": "FollowerOnlyReferenceModule",
+            "addy": "0xb229DfcADf0580Ae75329c6804a251351296e476"
+          },
+          {
+            "name": "DegreesOfSeparationReferenceModule",
+            "addy": "0x"
+          }
+        ]
+      },
+      "v2": {}
+    },
+    "Treasury": "0x8066108258fFb46a14855A47B76C03730aF835de",
+    "TreasuryFee": "0",
+    "LegacyCollectNFTImpl": "0xc917ce59272392676cc70056C0DE0806F6DfEd7c",
+    "FollowNFTImpl": "0xBAeC7aeEbB1916e762a30dd5e73a17D26A740fde",
+    "DiGiHandlesImpl": "0xcE557F3DDfBd1B87074E4386cd98D6B8E80997ED",
+    "DiGiHandles": "0xe7E7EaD361f3AaCD73A61A9bD6C10cA17F38E945",
+    "TokenHandleRegistryImpl": "0x52fa68D73C83df39B9a637F82361d9b70aAb74F4",
+    "TokenHandleRegistry": "0xD4F2F33680FCCb36748FA9831851643781608844",
+    "ModuleRegistryImpl": "0xeD935AcE8f82FcAB4cae41F240c3a4aE51931313",
+    "ModuleRegistry": "0x1eD5983F0c883B96f7C35528a1e22EEA67DE3Ff9",
+    "DiGiHubV2Impl": "0x92fE81FF570869eDE4c90fc5C949bb566b1f52f7",
+    "GovernanceContract": "0x8066108258fFb46a14855A47B76C03730aF835de",
+    "GovernanceContractAdmin": "0x2b87AfA1C572cbce9b9195eB3b0864d98284c10D",
+    "ProxyAdminContract": "0xa6978861Df00691e57D617980c533A5b8CaAcad5",
+    "ProxyAdminContractAdmin": "0x2b87AfA1C572cbce9b9195eB3b0864d98284c10D",
+    "DiGiV2UpgradeContract": "0xd38c614AD4c09877F3a95Fef2FBf2781b4e9736D",
+    "ProfileCreationProxy": "0x31C304dAF1f594Bbe4f65866aFbF996A011672dA",
+    "PublicActProxy": "0x53582b1b7BE71622E7386D736b6baf87749B7a2B",
+    "CollectNFT": "0x0c2a7761E2971D906338F5da1ecF0027E4247fd7",
+    "CollectPublicationActionImpl": "0xcc3f120f3d3bf860b910b228d2114f474b382c1d",
+    "LitAccessControlImpl": "0x79dcA158B2A019EA2377f5989066a1ac0aC20e10",
+    "LitAccessControl": "0x98a6C31E43b158198da95Ef1242faCA868424187",
+    "ProfileTokenURI": "0xE01e1017Eb1D49Aa7034628cd2e3021536cdeBE5",
+    "HandleTokenURI": "0x9632dC8eb31CEC8fcd166a99C1Da179716aE2E48",
+    "FollowTokenURI": "0x07D8a9FEdef6DC7004b9ae0935eA178bFa8bBdF1"
+  }
+}

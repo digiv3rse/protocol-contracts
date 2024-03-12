@@ -1,0 +1,83 @@
+{
+	"language": "Solidity",
+	"settings": {
+		"optimizer": {
+			"enabled": true,
+			"runs": 10
+		},
+		"outputSelection": {
+			"*": {
+				"": [
+					"ast"
+				],
+				"*": [
+					"abi",
+					"metadata",
+					"devdoc",
+					"userdoc",
+					"storageLayout",
+					"evm.legacyAssembly",
+					"evm.bytecode",
+					"evm.deployedBytecode",
+					"evm.methodIdentifiers",
+					"evm.gasEstimates",
+					"evm.assembly"
+				]
+			}
+		},
+		"remappings": [
+			"ds-test/=lib/forge-std/lib/ds-test/src/",
+			"forge-std/=lib/forge-std/src/",
+			"@seadrop/=lib/seadrop/src/",
+			"@openzeppelin/=lib/openzeppelin-contracts/",
+			"ERC721A/=lib/seadrop/lib/ERC721A/contracts/",
+			"ERC721A-Upgradeable/=lib/seadrop/lib/ERC721A-Upgradeable/contracts/",
+			"murky/=lib/seadrop/lib/murky/src/",
+			"openzeppelin-contracts/=lib/seadrop/lib/openzeppelin-contracts/contracts/",
+			"openzeppelin-contracts-upgradeable/=lib/seadrop/lib/openzeppelin-contracts-upgradeable/contracts/",
+			"operator-filter-registry/=lib/seadrop/lib/operator-filter-registry/src/",
+			"solmate/=lib/seadrop/lib/solmate/src/",
+			"utility-contracts/=lib/seadrop/lib/utility-contracts/src/",
+			"create2-scripts/=lib/seadrop/lib/create2-helpers/script/",
+			"solady/=lib/solady/src/",
+			"@ensdomains/=node_modules/@ensdomains/",
+			"core-private/=lib/core-private/",
+			"create2-helpers/=lib/seadrop/lib/create2-helpers/",
+			"erc4626-tests/=lib/seadrop/lib/operator-filter-registry/lib/openzeppelin-contracts/lib/erc4626-tests/",
+			"eth-gas-reporter/=node_modules/eth-gas-reporter/",
+			"hardhat/=node_modules/hardhat/",
+			"seadrop/=lib/seadrop/"
+		],
+		"evmVersion": "paris",
+		"viaIR": true,
+		"libraries": {
+			"contracts/libraries/ActionLib.sol": {
+				"ActionLib": "0xbcF556476d15b5EB8d6356c73CB10EE615DdB889"
+			},
+			"contracts/libraries/FollowLib.sol": {
+				"FollowLib": "0x1592aDeb7De6a83dCe934356584277B49bcf73A6"
+			},
+			"contracts/libraries/GovernanceLib.sol": {
+				"GovernanceLib": "0xA420ff473c97aC27F47e4490B4009515B99ac200"
+			},
+			"contracts/libraries/LegacyCollectLib.sol": {
+				"LegacyCollectLib": "0x9C1Fb3c3e570D28eB1C7BC81Fbdd9f190768640B"
+			},
+			"contracts/libraries/MetaTxLib.sol": {
+				"MetaTxLib": "0x1F92420bC86799919fdDcc0C660C1C36ED8F60Ca"
+			},
+			"contracts/libraries/MigrationLib.sol": {
+				"MigrationLib": "0x1Bb8EFE7AF7Cb333F94FB46FB6De73812899B833"
+			},
+			"contracts/libraries/ProfileLib.sol": {
+				"ProfileLib": "0xA3D878EA3a10fDd20ebFDbf780683435645e7aDA"
+			},
+			"contracts/libraries/PublicationLib.sol": {
+				"PublicationLib": "0xc4E21ef9636F9e1448A1500ADce25cA83175F660"
+			},
+			"contracts/libraries/ValidationLib.sol": {
+				"ValidationLib": "0xCDdd1B99C34080771B337b7f98ac6840bcC8bc61"
+			}
+		}
+	}
+}
