@@ -1,0 +1,649 @@
+<!DOCTYPE HTML>
+<html lang="en" class="light" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Events</title>
+
+
+        <!-- Custom HTML head -->
+        
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../../../../favicon.svg">
+        <link rel="shortcut icon" href="../../../../favicon.png">
+        <link rel="stylesheet" href="../../../../css/variables.css">
+        <link rel="stylesheet" href="../../../../css/general.css">
+        <link rel="stylesheet" href="../../../../css/chrome.css">
+        <link rel="stylesheet" href="../../../../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../../../../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../../../../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../../../../highlight.css">
+        <link rel="stylesheet" href="../../../../tomorrow-night.css">
+        <link rel="stylesheet" href="../../../../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        <link rel="stylesheet" href="../../../../book.css">
+
+    </head>
+    <body class="sidebar-visible no-js">
+    <div id="body-container">
+        <!-- Provide site root to javascript -->
+        <script>
+            var path_to_root = "../../../../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('light')
+            html.classList.add(theme);
+            var body = document.querySelector('body');
+            body.classList.remove('no-js')
+            body.classList.add('js');
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            var body = document.querySelector('body');
+            var sidebar = null;
+            var sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            body.classList.remove('sidebar-visible');
+            body.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item "><a href="../../../../index.html">Home</a></li><li class="chapter-item affix "><li class="part-title">contracts</li><li class="chapter-item "><a href="../../../../contracts/base/index.html">❱ base</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../../../contracts/base/upgradeability/index.html">❱ upgradeability</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../../../contracts/base/upgradeability/DiGiHubUpgradeableProxy.sol/contract.DiGiHubUpgradeableProxy.html">DiGiHubUpgradeableProxy</a></li><li class="chapter-item "><a href="../../../../contracts/base/upgradeability/FollowNFTProxy.sol/contract.FollowNFTProxy.html">FollowNFTProxy</a></li><li class="chapter-item "><a href="../../../../contracts/base/upgradeability/TransparentUpgradeableProxy.sol/contract.TransparentUpgradeableProxy.html">TransparentUpgradeableProxy</a></li><li class="chapter-item "><a href="../../../../contracts/base/upgradeability/VersionedInitializable.sol/abstract.VersionedInitializable.html">VersionedInitializable</a></li></ol></li><li class="chapter-item "><a href="../../../../contracts/base/DiGiBaseERC721.sol/abstract.DiGiBaseERC721.html">DiGiBaseERC721</a></li><li class="chapter-item "><a href="../../../../contracts/base/DiGiGovernable.sol/abstract.DiGiGovernable.html">DiGiGovernable</a></li><li class="chapter-item "><a href="../../../../contracts/base/DiGiHubEventHooks.sol/abstract.DiGiHubEventHooks.html">DiGiHubEventHooks</a></li><li class="chapter-item "><a href="../../../../contracts/base/DiGiHubStorage.sol/abstract.DiGiHubStorage.html">DiGiHubStorage</a></li><li class="chapter-item "><a href="../../../../contracts/base/DiGiImplGetters.sol/contract.DiGiImplGetters.html">DiGiImplGetters</a></li><li class="chapter-item "><a href="../../../../contracts/base/DiGiProfiles.sol/abstract.DiGiProfiles.html">DiGiProfiles</a></li><li class="chapter-item "><a href="../../../../contracts/base/DiGiVersion.sol/contract.DiGiVersion.html">DiGiVersion</a></li><li class="chapter-item "><a href="../../../../contracts/base/ERC2981CollectionRoyalties.sol/abstract.ERC2981CollectionRoyalties.html">ERC2981CollectionRoyalties</a></li><li class="chapter-item "><a href="../../../../contracts/base/HubRestricted.sol/abstract.HubRestricted.html">HubRestricted</a></li></ol></li><li class="chapter-item "><a href="../../../../contracts/interfaces/index.html">❱ interfaces</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../../../contracts/interfaces/ICollectNFT.sol/interface.ICollectNFT.html">ICollectNFT</a></li><li class="chapter-item "><a href="../../../../contracts/interfaces/IDiGiERC721.sol/interface.IDiGiERC721.html">IDiGiERC721</a></li><li class="chapter-item "><a href="../../../../contracts/interfaces/IDiGiGovernable.sol/interface.IDiGiGovernable.html">IDiGiGovernable</a></li><li class="chapter-item "><a href="../../../../contracts/interfaces/IDiGiHandles.sol/interface.IDiGiHandles.html">IDiGiHandles</a></li><li class="chapter-item "><a href="../../../../contracts/interfaces/IDiGiHub.sol/interface.IDiGiHub.html">IDiGiHub</a></li><li class="chapter-item "><a href="../../../../contracts/interfaces/IDiGiHubEventHooks.sol/interface.IDiGiHubEventHooks.html">IDiGiHubEventHooks</a></li><li class="chapter-item "><a href="../../../../contracts/interfaces/IDiGiHubInitializable.sol/interface.IDiGiHubInitializable.html">IDiGiHubInitializable</a></li><li class="chapter-item "><a href="../../../../contracts/interfaces/IDiGiImplGetters.sol/interface.IDiGiImplGetters.html">IDiGiImplGetters</a></li><li class="chapter-item "><a href="../../../../contracts/interfaces/IDiGiProfiles.sol/interface.IDiGiProfiles.html">IDiGiProfiles</a></li><li class="chapter-item "><a href="../../../../contracts/interfaces/IDiGiProtocol.sol/interface.IDiGiProtocol.html">IDiGiProtocol</a></li><li class="chapter-item "><a href="../../../../contracts/interfaces/IDiGiVersion.sol/interface.IDiGiVersion.html">IDiGiVersion</a></li><li class="chapter-item "><a href="../../../../contracts/interfaces/IERC721Burnable.sol/interface.IERC721Burnable.html">IERC721Burnable</a></li><li class="chapter-item "><a href="../../../../contracts/interfaces/IERC721MetaTx.sol/interface.IERC721MetaTx.html">IERC721MetaTx</a></li><li class="chapter-item "><a href="../../../../contracts/interfaces/IERC721Timestamped.sol/interface.IERC721Timestamped.html">IERC721Timestamped</a></li><li class="chapter-item "><a href="../../../../contracts/interfaces/IFollowModule.sol/interface.IFollowModule.html">IFollowModule</a></li><li class="chapter-item "><a href="../../../../contracts/interfaces/IFollowNFT.sol/interface.IFollowNFT.html">IFollowNFT</a></li><li class="chapter-item "><a href="../../../../contracts/interfaces/IFollowTokenURI.sol/interface.IFollowTokenURI.html">IFollowTokenURI</a></li><li class="chapter-item "><a href="../../../../contracts/interfaces/IHandleTokenURI.sol/interface.IHandleTokenURI.html">IHandleTokenURI</a></li><li class="chapter-item "><a href="../../../../contracts/interfaces/ILegacyCollectModule.sol/interface.ILegacyCollectModule.html">ILegacyCollectModule</a></li><li class="chapter-item "><a href="../../../../contracts/interfaces/ILegacyCollectNFT.sol/interface.ILegacyCollectNFT.html">ILegacyCollectNFT</a></li><li class="chapter-item "><a href="../../../../contracts/interfaces/ILegacyFollowModule.sol/interface.ILegacyFollowModule.html">ILegacyFollowModule</a></li><li class="chapter-item "><a href="../../../../contracts/interfaces/ILegacyReferenceModule.sol/interface.ILegacyReferenceModule.html">ILegacyReferenceModule</a></li><li class="chapter-item "><a href="../../../../contracts/interfaces/IModuleRegistry.sol/interface.IModuleRegistry.html">IModuleRegistry</a></li><li class="chapter-item "><a href="../../../../contracts/interfaces/IProfileTokenURI.sol/interface.IProfileTokenURI.html">IProfileTokenURI</a></li><li class="chapter-item "><a href="../../../../contracts/interfaces/IPublicationActionModule.sol/interface.IPublicationActionModule.html">IPublicationActionModule</a></li><li class="chapter-item "><a href="../../../../contracts/interfaces/IReferenceModule.sol/interface.IReferenceModule.html">IReferenceModule</a></li><li class="chapter-item "><a href="../../../../contracts/interfaces/ITokenHandleRegistry.sol/interface.ITokenHandleRegistry.html">ITokenHandleRegistry</a></li></ol></li><li class="chapter-item expanded "><a href="../../../../contracts/libraries/index.html">❱ libraries</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../../../contracts/libraries/constants/index.html">❱ constants</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../../../contracts/libraries/constants/Errors.sol/library.Errors.html">Errors</a></li><li class="chapter-item expanded "><a href="../../../../contracts/libraries/constants/Events.sol/library.Events.html" class="active">Events</a></li><li class="chapter-item "><a href="../../../../contracts/libraries/constants/Typehash.sol/library.Typehash.html">Typehash</a></li><li class="chapter-item "><a href="../../../../contracts/libraries/constants/Types.sol/library.Types.html">Types</a></li></ol></li><li class="chapter-item "><a href="../../../../contracts/libraries/svgs/index.html">❱ svgs</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../../../contracts/libraries/svgs/Follow/index.html">❱ Follow</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../../../contracts/libraries/svgs/Follow/FollowSVG.sol/library.FollowSVG.html">FollowSVG</a></li></ol></li><li class="chapter-item "><a href="../../../../contracts/libraries/svgs/Handle/index.html">❱ Handle</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../../../contracts/libraries/svgs/Handle/GintoNordFontSVG.sol/library.GintoNordFontSVG.html">GintoNordFontSVG</a></li><li class="chapter-item "><a href="../../../../contracts/libraries/svgs/Handle/HandleSVG.sol/library.HandleSVG.html">HandleSVG</a></li></ol></li><li class="chapter-item "><a href="../../../../contracts/libraries/svgs/Profile/index.html">❱ Profile</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../../../contracts/libraries/svgs/Profile/Body/index.html">❱ Body</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../../../contracts/libraries/svgs/Profile/Body/BodyHoodie.sol/library.BodyHoodie.html">BodyHoodie</a></li><li class="chapter-item "><a href="../../../../contracts/libraries/svgs/Profile/Body/BodyJacket.sol/library.BodyJacket.html">BodyJacket</a></li><li class="chapter-item "><a href="../../../../contracts/libraries/svgs/Profile/Body/BodyTShirt.sol/library.BodyTShirt.html">BodyTShirt</a></li><li class="chapter-item "><a href="../../../../contracts/libraries/svgs/Profile/Body/BodyTanktop.sol/library.BodyTanktop.html">BodyTanktop</a></li></ol></li><li class="chapter-item "><a href="../../../../contracts/libraries/svgs/Profile/Headwear/index.html">❱ Headwear</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../../../contracts/libraries/svgs/Profile/Headwear/HeadwearBeanie.sol/library.HeadwearBeanie.html">HeadwearBeanie</a></li><li class="chapter-item "><a href="../../../../contracts/libraries/svgs/Profile/Headwear/HeadwearCrown.sol/library.HeadwearCrown.html">HeadwearCrown</a></li><li class="chapter-item "><a href="../../../../contracts/libraries/svgs/Profile/Headwear/HeadwearFloral.sol/library.HeadwearFloral.html">HeadwearFloral</a></li><li class="chapter-item "><a href="../../../../contracts/libraries/svgs/Profile/Headwear/HeadwearGlasses.sol/library.HeadwearGlasses.html">HeadwearGlasses</a></li><li class="chapter-item "><a href="../../../../contracts/libraries/svgs/Profile/Headwear/HeadwearHat.sol/library.HeadwearHat.html">HeadwearHat</a></li><li class="chapter-item "><a href="../../../../contracts/libraries/svgs/Profile/Headwear/HeadwearIcecream.sol/library.HeadwearIcecream.html">HeadwearIcecream</a></li><li class="chapter-item "><a href="../../../../contracts/libraries/svgs/Profile/Headwear/HeadwearLeafs.sol/library.HeadwearLeafs.html">HeadwearLeafs</a></li><li class="chapter-item "><a href="../../../../contracts/libraries/svgs/Profile/Headwear/HeadwearMushroom.sol/library.HeadwearMushroom.html">HeadwearMushroom</a></li><li class="chapter-item "><a href="../../../../contracts/libraries/svgs/Profile/Headwear/HeadwearNightcap.sol/library.HeadwearNightcap.html">HeadwearNightcap</a></li><li class="chapter-item "><a href="../../../../contracts/libraries/svgs/Profile/Headwear/HeadwearPartyhat.sol/library.HeadwearPartyhat.html">HeadwearPartyhat</a></li><li class="chapter-item "><a href="../../../../contracts/libraries/svgs/Profile/Headwear/HeadwearPlants.sol/library.HeadwearPlants.html">HeadwearPlants</a></li><li class="chapter-item "><a href="../../../../contracts/libraries/svgs/Profile/Headwear/HeadwearSparkles.sol/library.HeadwearSparkles.html">HeadwearSparkles</a></li></ol></li><li class="chapter-item "><a href="../../../../contracts/libraries/svgs/Profile/Body.sol/library.Body.html">Body</a></li><li class="chapter-item "><a href="../../../../contracts/libraries/svgs/Profile/Face.sol/library.Face.html">Face</a></li><li class="chapter-item "><a href="../../../../contracts/libraries/svgs/Profile/Hands.sol/library.Hands.html">Hands</a></li><li class="chapter-item "><a href="../../../../contracts/libraries/svgs/Profile/Head.sol/library.Head.html">Head</a></li><li class="chapter-item "><a href="../../../../contracts/libraries/svgs/Profile/Headwear.sol/library.Headwear.html">Headwear</a></li><li class="chapter-item "><a href="../../../../contracts/libraries/svgs/Profile/Helpers.sol/library.Helpers.html">Helpers</a></li><li class="chapter-item "><a href="../../../../contracts/libraries/svgs/Profile/Helpers.sol/library.Background.html">Background</a></li><li class="chapter-item "><a href="../../../../contracts/libraries/svgs/Profile/Helpers.sol/library.Skin.html">Skin</a></li><li class="chapter-item "><a href="../../../../contracts/libraries/svgs/Profile/Helpers.sol/library.GoldSparkles.html">GoldSparkles</a></li><li class="chapter-item "><a href="../../../../contracts/libraries/svgs/Profile/Legs.sol/library.Legs.html">Legs</a></li><li class="chapter-item "><a href="../../../../contracts/libraries/svgs/Profile/Logo.sol/library.Logo.html">Logo</a></li><li class="chapter-item "><a href="../../../../contracts/libraries/svgs/Profile/ProfileSVG.sol/library.ProfileSVG.html">ProfileSVG</a></li><li class="chapter-item "><a href="../../../../contracts/libraries/svgs/Profile/Shoes.sol/library.Shoes.html">Shoes</a></li></ol></li></ol></li><li class="chapter-item "><a href="../../../../contracts/libraries/ActionLib.sol/library.ActionLib.html">ActionLib</a></li><li class="chapter-item "><a href="../../../../contracts/libraries/FollowLib.sol/library.FollowLib.html">FollowLib</a></li><li class="chapter-item "><a href="../../../../contracts/libraries/GovernanceLib.sol/library.GovernanceLib.html">GovernanceLib</a></li><li class="chapter-item "><a href="../../../../contracts/libraries/LegacyCollectLib.sol/library.LegacyCollectLib.html">LegacyCollectLib</a></li><li class="chapter-item "><a href="../../../../contracts/libraries/MetaTxLib.sol/library.MetaTxLib.html">MetaTxLib</a></li><li class="chapter-item "><a href="../../../../contracts/libraries/MigrationLib.sol/interface.ILegacyFeeFollowModule.html">ILegacyFeeFollowModule</a></li><li class="chapter-item "><a href="../../../../contracts/libraries/MigrationLib.sol/library.MigrationLib.html">MigrationLib</a></li><li class="chapter-item "><a href="../../../../contracts/libraries/ProfileLib.sol/library.ProfileLib.html">ProfileLib</a></li><li class="chapter-item "><a href="../../../../contracts/libraries/PublicationLib.sol/library.PublicationLib.html">PublicationLib</a></li><li class="chapter-item "><a href="../../../../contracts/libraries/StorageLib.sol/library.StorageLib.html">StorageLib</a></li><li class="chapter-item "><a href="../../../../contracts/libraries/ValidationLib.sol/library.ValidationLib.html">ValidationLib</a></li></ol></li><li class="chapter-item "><a href="../../../../contracts/misc/index.html">❱ misc</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../../../contracts/misc/access/index.html">❱ access</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../../../contracts/misc/access/ControllableByContract.sol/contract.ControllableByContract.html">ControllableByContract</a></li><li class="chapter-item "><a href="../../../../contracts/misc/access/Governance.sol/contract.Governance.html">Governance</a></li><li class="chapter-item "><a href="../../../../contracts/misc/access/LitAccessControl.sol/contract.LitAccessControl.html">LitAccessControl</a></li><li class="chapter-item "><a href="../../../../contracts/misc/access/ProxyAdmin.sol/contract.ProxyAdmin.html">ProxyAdmin</a></li></ol></li><li class="chapter-item "><a href="../../../../contracts/misc/token-uris/index.html">❱ token-uris</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../../../contracts/misc/token-uris/FollowTokenURI.sol/contract.FollowTokenURI.html">FollowTokenURI</a></li><li class="chapter-item "><a href="../../../../contracts/misc/token-uris/HandleTokenURI.sol/contract.HandleTokenURI.html">HandleTokenURI</a></li><li class="chapter-item "><a href="../../../../contracts/misc/token-uris/ProfileTokenURI.sol/contract.ProfileTokenURI.html">ProfileTokenURI</a></li></ol></li><li class="chapter-item "><a href="../../../../contracts/misc/DiGiHubInitializable.sol/contract.DiGiHubInitializable.html">DiGiHubInitializable</a></li><li class="chapter-item "><a href="../../../../contracts/misc/DiGiV2Migration.sol/contract.DiGiV2Migration.html">DiGiV2Migration</a></li><li class="chapter-item "><a href="../../../../contracts/misc/DiGiV2UpgradeContract.sol/contract.DiGiV2UpgradeContract.html">DiGiV2UpgradeContract</a></li><li class="chapter-item "><a href="../../../../contracts/misc/ImmutableOwnable.sol/contract.ImmutableOwnable.html">ImmutableOwnable</a></li><li class="chapter-item "><a href="../../../../contracts/misc/LegacyCollectNFT.sol/contract.LegacyCollectNFT.html">LegacyCollectNFT</a></li><li class="chapter-item "><a href="../../../../contracts/misc/ModuleRegistry.sol/contract.ModuleRegistry.html">ModuleRegistry</a></li><li class="chapter-item "><a href="../../../../contracts/misc/PermissionlessCreator.sol/library.Types.html">Types</a></li><li class="chapter-item "><a href="../../../../contracts/misc/PermissionlessCreator.sol/interface.IDiGiProtocol.html">IDiGiProtocol</a></li><li class="chapter-item "><a href="../../../../contracts/misc/PermissionlessCreator.sol/interface.IDiGiGovernable.html">IDiGiGovernable</a></li><li class="chapter-item "><a href="../../../../contracts/misc/PermissionlessCreator.sol/interface.IDiGiHubEventHooks.html">IDiGiHubEventHooks</a></li><li class="chapter-item "><a href="../../../../contracts/misc/PermissionlessCreator.sol/interface.IDiGiImplGetters.html">IDiGiImplGetters</a></li><li class="chapter-item "><a href="../../../../contracts/misc/PermissionlessCreator.sol/interface.IERC165.html">IERC165</a></li><li class="chapter-item "><a href="../../../../contracts/misc/PermissionlessCreator.sol/interface.IERC721.html">IERC721</a></li><li class="chapter-item "><a href="../../../../contracts/misc/PermissionlessCreator.sol/interface.IERC721Burnable.html">IERC721Burnable</a></li><li class="chapter-item "><a href="../../../../contracts/misc/PermissionlessCreator.sol/interface.IERC721MetaTx.html">IERC721MetaTx</a></li><li class="chapter-item "><a href="../../../../contracts/misc/PermissionlessCreator.sol/interface.IERC721Timestamped.html">IERC721Timestamped</a></li><li class="chapter-item "><a href="../../../../contracts/misc/PermissionlessCreator.sol/interface.IERC721Metadata.html">IERC721Metadata</a></li><li class="chapter-item "><a href="../../../../contracts/misc/PermissionlessCreator.sol/interface.IDiGiERC721.html">IDiGiERC721</a></li><li class="chapter-item "><a href="../../../../contracts/misc/PermissionlessCreator.sol/interface.IDiGiProfiles.html">IDiGiProfiles</a></li><li class="chapter-item "><a href="../../../../contracts/misc/PermissionlessCreator.sol/interface.IDiGiVersion.html">IDiGiVersion</a></li><li class="chapter-item "><a href="../../../../contracts/misc/PermissionlessCreator.sol/interface.IDiGiHub.html">IDiGiHub</a></li><li class="chapter-item "><a href="../../../../contracts/misc/PermissionlessCreator.sol/interface.IDiGiHandles.html">IDiGiHandles</a></li><li class="chapter-item "><a href="../../../../contracts/misc/PermissionlessCreator.sol/interface.ITokenHandleRegistry.html">ITokenHandleRegistry</a></li><li class="chapter-item "><a href="../../../../contracts/misc/PermissionlessCreator.sol/contract.ImmutableOwnable.html">ImmutableOwnable</a></li><li class="chapter-item "><a href="../../../../contracts/misc/PermissionlessCreator.sol/contract.PermissionlessCreator.html">PermissionlessCreator</a></li><li class="chapter-item "><a href="../../../../contracts/misc/ProfileCreationProxy.sol/contract.ProfileCreationProxy.html">ProfileCreationProxy</a></li><li class="chapter-item "><a href="../../../../contracts/misc/PublicActProxy.sol/contract.PublicActProxy.html">PublicActProxy</a></li></ol></li><li class="chapter-item "><a href="../../../../contracts/modules/index.html">❱ modules</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../../../contracts/modules/act/index.html">❱ act</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../../../contracts/modules/act/collect/index.html">❱ collect</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../../../contracts/modules/act/collect/base/index.html">❱ base</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../../../contracts/modules/act/collect/base/BaseFeeCollectModule.sol/abstract.BaseFeeCollectModule.html">BaseFeeCollectModule</a></li></ol></li><li class="chapter-item "><a href="../../../../contracts/modules/act/collect/CollectNFT.sol/contract.CollectNFT.html">CollectNFT</a></li><li class="chapter-item "><a href="../../../../contracts/modules/act/collect/CollectPublicationAction.sol/contract.CollectPublicationAction.html">CollectPublicationAction</a></li><li class="chapter-item "><a href="../../../../contracts/modules/act/collect/MultirecipientFeeCollectModule.sol/struct.RecipientData.html">RecipientData</a></li><li class="chapter-item "><a href="../../../../contracts/modules/act/collect/MultirecipientFeeCollectModule.sol/struct.MultirecipientFeeCollectModuleInitData.html">MultirecipientFeeCollectModuleInitData</a></li><li class="chapter-item "><a href="../../../../contracts/modules/act/collect/MultirecipientFeeCollectModule.sol/struct.MultirecipientFeeCollectProfilePublicationData.html">MultirecipientFeeCollectProfilePublicationData</a></li><li class="chapter-item "><a href="../../../../contracts/modules/act/collect/MultirecipientFeeCollectModule.sol/error.TooManyRecipients.html">TooManyRecipients</a></li><li class="chapter-item "><a href="../../../../contracts/modules/act/collect/MultirecipientFeeCollectModule.sol/error.InvalidRecipientSplits.html">InvalidRecipientSplits</a></li><li class="chapter-item "><a href="../../../../contracts/modules/act/collect/MultirecipientFeeCollectModule.sol/error.RecipientSplitCannotBeZero.html">RecipientSplitCannotBeZero</a></li><li class="chapter-item "><a href="../../../../contracts/modules/act/collect/MultirecipientFeeCollectModule.sol/contract.MultirecipientFeeCollectModule.html">MultirecipientFeeCollectModule</a></li><li class="chapter-item "><a href="../../../../contracts/modules/act/collect/SimpleFeeCollectModule.sol/contract.SimpleFeeCollectModule.html">SimpleFeeCollectModule</a></li></ol></li><li class="chapter-item "><a href="../../../../contracts/modules/act/seadrop/index.html">❱ seadrop</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../../../contracts/modules/act/seadrop/DiGiSeaDropCollection.sol/contract.DiGiSeaDropCollection.html">DiGiSeaDropCollection</a></li><li class="chapter-item "><a href="../../../../contracts/modules/act/seadrop/SeaDropMintPublicationAction.sol/contract.SeaDropMintPublicationAction.html">SeaDropMintPublicationAction</a></li></ol></li></ol></li><li class="chapter-item "><a href="../../../../contracts/modules/constants/index.html">❱ constants</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../../../contracts/modules/constants/Errors.sol/library.Errors.html">Errors</a></li></ol></li><li class="chapter-item "><a href="../../../../contracts/modules/creator/index.html">❱ creator</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../../../contracts/modules/creator/CollectionCreator.sol/contract.CollectionCreator.html">CollectionCreator</a></li><li class="chapter-item "><a href="../../../../contracts/modules/creator/MarketCreator.sol/contract.MarketCreator.html">MarketCreator</a></li><li class="chapter-item "><a href="../../../../contracts/modules/creator/NFTCreator.sol/contract.NFTCreator.html">NFTCreator</a></li><li class="chapter-item "><a href="../../../../contracts/modules/creator/PrintAccessControl.sol/contract.PrintAccessControl.html">PrintAccessControl</a></li><li class="chapter-item "><a href="../../../../contracts/modules/creator/PrintCommunityData.sol/contract.PrintCommunityData.html">PrintCommunityData</a></li><li class="chapter-item "><a href="../../../../contracts/modules/creator/PrintDesignData.sol/contract.PrintDesignData.html">PrintDesignData</a></li><li class="chapter-item "><a href="../../../../contracts/modules/creator/PrintLibrary.sol/contract.PrintLibrary.html">PrintLibrary</a></li><li class="chapter-item "><a href="../../../../contracts/modules/creator/PrintOrderData.sol/contract.PrintOrderData.html">PrintOrderData</a></li><li class="chapter-item "><a href="../../../../contracts/modules/creator/PrintSplitsData.sol/contract.PrintSplitsData.html">PrintSplitsData</a></li></ol></li><li class="chapter-item "><a href="../../../../contracts/modules/follow/index.html">❱ follow</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../../../contracts/modules/follow/FeeFollowModule.sol/struct.FeeConfig.html">FeeConfig</a></li><li class="chapter-item "><a href="../../../../contracts/modules/follow/FeeFollowModule.sol/contract.FeeFollowModule.html">FeeFollowModule</a></li><li class="chapter-item "><a href="../../../../contracts/modules/follow/RevertFollowModule.sol/contract.RevertFollowModule.html">RevertFollowModule</a></li></ol></li><li class="chapter-item "><a href="../../../../contracts/modules/interfaces/index.html">❱ interfaces</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../../../contracts/modules/interfaces/IBaseFeeCollectModule.sol/struct.BaseProfilePublicationData.html">BaseProfilePublicationData</a></li><li class="chapter-item "><a href="../../../../contracts/modules/interfaces/IBaseFeeCollectModule.sol/struct.BaseFeeCollectModuleInitData.html">BaseFeeCollectModuleInitData</a></li><li class="chapter-item "><a href="../../../../contracts/modules/interfaces/IBaseFeeCollectModule.sol/interface.IBaseFeeCollectModule.html">IBaseFeeCollectModule</a></li><li class="chapter-item "><a href="../../../../contracts/modules/interfaces/ICollectModule.sol/interface.ICollectModule.html">ICollectModule</a></li><li class="chapter-item "><a href="../../../../contracts/modules/interfaces/IDiGiModule.sol/interface.IDiGiModule.html">IDiGiModule</a></li><li class="chapter-item "><a href="../../../../contracts/modules/interfaces/IWMATIC.sol/interface.IWMATIC.html">IWMATIC</a></li></ol></li><li class="chapter-item "><a href="../../../../contracts/modules/libraries/index.html">❱ libraries</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../../../contracts/modules/libraries/constants/index.html">❱ constants</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../../../contracts/modules/libraries/constants/ModuleTypes.sol/library.ModuleTypes.html">ModuleTypes</a></li></ol></li><li class="chapter-item "><a href="../../../../contracts/modules/libraries/FollowValidationLib.sol/library.FollowValidationLib.html">FollowValidationLib</a></li></ol></li><li class="chapter-item "><a href="../../../../contracts/modules/reference/index.html">❱ reference</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../../../contracts/modules/reference/DegreesOfSeparationReferenceModule.sol/struct.ModuleConfig.html">ModuleConfig</a></li><li class="chapter-item "><a href="../../../../contracts/modules/reference/DegreesOfSeparationReferenceModule.sol/contract.DegreesOfSeparationReferenceModule.html">DegreesOfSeparationReferenceModule</a></li><li class="chapter-item "><a href="../../../../contracts/modules/reference/FollowerOnlyReferenceModule.sol/contract.FollowerOnlyReferenceModule.html">FollowerOnlyReferenceModule</a></li><li class="chapter-item "><a href="../../../../contracts/modules/reference/TokenGatedReferenceModule.sol/interface.IToken.html">IToken</a></li><li class="chapter-item "><a href="../../../../contracts/modules/reference/TokenGatedReferenceModule.sol/struct.GateParams.html">GateParams</a></li><li class="chapter-item "><a href="../../../../contracts/modules/reference/TokenGatedReferenceModule.sol/contract.TokenGatedReferenceModule.html">TokenGatedReferenceModule</a></li></ol></li><li class="chapter-item "><a href="../../../../contracts/modules/ActionRestricted.sol/abstract.ActionRestricted.html">ActionRestricted</a></li><li class="chapter-item "><a href="../../../../contracts/modules/DiGiModule.sol/abstract.DiGiModule.html">DiGiModule</a></li><li class="chapter-item "><a href="../../../../contracts/modules/DiGiModuleMetadata.sol/contract.DiGiModuleMetadata.html">DiGiModuleMetadata</a></li><li class="chapter-item "><a href="../../../../contracts/modules/DiGiModuleMetadataInitializable.sol/contract.DiGiModuleMetadataInitializable.html">DiGiModuleMetadataInitializable</a></li><li class="chapter-item "><a href="../../../../contracts/modules/FeeModuleBase.sol/abstract.FeeModuleBase.html">FeeModuleBase</a></li><li class="chapter-item "><a href="../../../../contracts/modules/ListenerOpenAction.sol/contract.ListenerOpenAction.html">ListenerOpenAction</a></li></ol></li><li class="chapter-item "><a href="../../../../contracts/namespaces/index.html">❱ namespaces</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../../../contracts/namespaces/constants/index.html">❱ constants</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../../../contracts/namespaces/constants/Errors.sol/library.RegistryErrors.html">RegistryErrors</a></li><li class="chapter-item "><a href="../../../../contracts/namespaces/constants/Errors.sol/library.HandlesErrors.html">HandlesErrors</a></li><li class="chapter-item "><a href="../../../../contracts/namespaces/constants/Events.sol/library.HandlesEvents.html">HandlesEvents</a></li><li class="chapter-item "><a href="../../../../contracts/namespaces/constants/Events.sol/library.RegistryEvents.html">RegistryEvents</a></li><li class="chapter-item "><a href="../../../../contracts/namespaces/constants/Typehash.sol/library.Typehash.html">Typehash</a></li><li class="chapter-item "><a href="../../../../contracts/namespaces/constants/Types.sol/library.RegistryTypes.html">RegistryTypes</a></li></ol></li><li class="chapter-item "><a href="../../../../contracts/namespaces/DiGiHandles.sol/contract.DiGiHandles.html">DiGiHandles</a></li><li class="chapter-item "><a href="../../../../contracts/namespaces/TokenHandleRegistry.sol/contract.TokenHandleRegistry.html">TokenHandleRegistry</a></li></ol></li><li class="chapter-item "><a href="../../../../contracts/DiGiHub.sol/contract.DiGiHub.html">DiGiHub</a></li><li class="chapter-item "><a href="../../../../contracts/FollowNFT.sol/contract.FollowNFT.html">FollowNFT</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <!-- Track and set sidebar scroll position -->
+        <script>
+            var sidebarScrollbox = document.querySelector('#sidebar .sidebar-scrollbox');
+            sidebarScrollbox.addEventListener('click', function(e) {
+                if (e.target.tagName === 'A') {
+                    sessionStorage.setItem('sidebar-scroll', sidebarScrollbox.scrollTop);
+                }
+            }, { passive: true });
+            var sidebarScrollTop = sessionStorage.getItem('sidebar-scroll');
+            sessionStorage.removeItem('sidebar-scroll');
+            if (sidebarScrollTop) {
+                // preserve sidebar scroll position when navigating via links within sidebar
+                sidebarScrollbox.scrollTop = sidebarScrollTop;
+            } else {
+                // scroll sidebar to current active section when navigating via "next/previous chapter" buttons
+                var activeSection = document.querySelector('#sidebar .active');
+                if (activeSection) {
+                    activeSection.scrollIntoView({ block: 'center' });
+                }
+            }
+        </script>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title"></h1>
+
+                    <div class="right-buttons">
+                        <a href="../../../../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        <a href="https://github.com/digiv3rse/protocol-contracts" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="events"><a class="header" href="#events">Events</a></h1>
+<p><a href="https://github.com/digiv3rse/protocol-contracts/blob/0d518167a484d4368bad0990424be098fe779fa4/contracts/libraries/constants/Events.sol">Git Source</a></p>
+<h2 id="events-1"><a class="header" href="#events-1">Events</a></h2>
+<h3 id="baseinitialized"><a class="header" href="#baseinitialized">BaseInitialized</a></h3>
+<p><em>Emitted when the NFT contract's name and symbol are set at initialization.</em></p>
+<pre><code class="language-solidity">event BaseInitialized(string name, string symbol, uint256 timestamp);
+</code></pre>
+<p><strong>Parameters</strong></p>
+<div class="table-wrapper"><table><thead><tr><th>Name</th><th>Type</th><th>Description</th></tr></thead><tbody>
+<tr><td><code>name</code></td><td><code>string</code></td><td>The NFT name set.</td></tr>
+<tr><td><code>symbol</code></td><td><code>string</code></td><td>The NFT symbol set.</td></tr>
+<tr><td><code>timestamp</code></td><td><code>uint256</code></td><td>The current block timestamp.</td></tr>
+</tbody></table>
+</div>
+<h3 id="stateset"><a class="header" href="#stateset">StateSet</a></h3>
+<p><em>Emitted when the hub state is set.</em></p>
+<pre><code class="language-solidity">event StateSet(
+    address indexed caller,
+    Types.ProtocolState indexed prevState,
+    Types.ProtocolState indexed newState,
+    uint256 timestamp
+);
+</code></pre>
+<p><strong>Parameters</strong></p>
+<div class="table-wrapper"><table><thead><tr><th>Name</th><th>Type</th><th>Description</th></tr></thead><tbody>
+<tr><td><code>caller</code></td><td><code>address</code></td><td>The caller who set the state.</td></tr>
+<tr><td><code>prevState</code></td><td><code>Types.ProtocolState</code></td><td>The previous protocol state, an enum of either <code>Paused</code>, <code>PublishingPaused</code> or <code>Unpaused</code>.</td></tr>
+<tr><td><code>newState</code></td><td><code>Types.ProtocolState</code></td><td>The newly set state, an enum of either <code>Paused</code>, <code>PublishingPaused</code> or <code>Unpaused</code>.</td></tr>
+<tr><td><code>timestamp</code></td><td><code>uint256</code></td><td>The current block timestamp.</td></tr>
+</tbody></table>
+</div>
+<h3 id="governanceset"><a class="header" href="#governanceset">GovernanceSet</a></h3>
+<p><em>Emitted when the governance address is changed. We emit the caller even though it should be the previous
+governance address, as we cannot guarantee this will always be the case due to upgradeability.</em></p>
+<pre><code class="language-solidity">event GovernanceSet(
+    address indexed caller, address indexed prevGovernance, address indexed newGovernance, uint256 timestamp
+);
+</code></pre>
+<p><strong>Parameters</strong></p>
+<div class="table-wrapper"><table><thead><tr><th>Name</th><th>Type</th><th>Description</th></tr></thead><tbody>
+<tr><td><code>caller</code></td><td><code>address</code></td><td>The caller who set the governance address.</td></tr>
+<tr><td><code>prevGovernance</code></td><td><code>address</code></td><td>The previous governance address.</td></tr>
+<tr><td><code>newGovernance</code></td><td><code>address</code></td><td>The new governance address set.</td></tr>
+<tr><td><code>timestamp</code></td><td><code>uint256</code></td><td>The current block timestamp.</td></tr>
+</tbody></table>
+</div>
+<h3 id="emergencyadminset"><a class="header" href="#emergencyadminset">EmergencyAdminSet</a></h3>
+<p><em>Emitted when the emergency admin is changed. We emit the caller even though it should be the previous
+governance address, as we cannot guarantee this will always be the case due to upgradeability.</em></p>
+<pre><code class="language-solidity">event EmergencyAdminSet(
+    address indexed caller, address indexed oldEmergencyAdmin, address indexed newEmergencyAdmin, uint256 timestamp
+);
+</code></pre>
+<p><strong>Parameters</strong></p>
+<div class="table-wrapper"><table><thead><tr><th>Name</th><th>Type</th><th>Description</th></tr></thead><tbody>
+<tr><td><code>caller</code></td><td><code>address</code></td><td>The caller who set the emergency admin address.</td></tr>
+<tr><td><code>oldEmergencyAdmin</code></td><td><code>address</code></td><td>The previous emergency admin address.</td></tr>
+<tr><td><code>newEmergencyAdmin</code></td><td><code>address</code></td><td>The new emergency admin address set.</td></tr>
+<tr><td><code>timestamp</code></td><td><code>uint256</code></td><td>The current block timestamp.</td></tr>
+</tbody></table>
+</div>
+<h3 id="profilecreatorwhitelisted"><a class="header" href="#profilecreatorwhitelisted">ProfileCreatorWhitelisted</a></h3>
+<p><em>Emitted when a profile creator is added to or removed from the whitelist.</em></p>
+<pre><code class="language-solidity">event ProfileCreatorWhitelisted(address indexed profileCreator, bool indexed whitelisted, uint256 timestamp);
+</code></pre>
+<p><strong>Parameters</strong></p>
+<div class="table-wrapper"><table><thead><tr><th>Name</th><th>Type</th><th>Description</th></tr></thead><tbody>
+<tr><td><code>profileCreator</code></td><td><code>address</code></td><td>The address of the profile creator.</td></tr>
+<tr><td><code>whitelisted</code></td><td><code>bool</code></td><td>Whether or not the profile creator is being added to the whitelist.</td></tr>
+<tr><td><code>timestamp</code></td><td><code>uint256</code></td><td>The current block timestamp.</td></tr>
+</tbody></table>
+</div>
+<h3 id="profilecreated"><a class="header" href="#profilecreated">ProfileCreated</a></h3>
+<p><em>Emitted when a profile is created.</em></p>
+<pre><code class="language-solidity">event ProfileCreated(uint256 indexed profileId, address indexed creator, address indexed to, uint256 timestamp);
+</code></pre>
+<p><strong>Parameters</strong></p>
+<div class="table-wrapper"><table><thead><tr><th>Name</th><th>Type</th><th>Description</th></tr></thead><tbody>
+<tr><td><code>profileId</code></td><td><code>uint256</code></td><td>The newly created profile's token ID.</td></tr>
+<tr><td><code>creator</code></td><td><code>address</code></td><td>The profile creator, who created the token with the given profile ID.</td></tr>
+<tr><td><code>to</code></td><td><code>address</code></td><td>The address receiving the profile with the given profile ID.</td></tr>
+<tr><td><code>timestamp</code></td><td><code>uint256</code></td><td>The current block timestamp.</td></tr>
+</tbody></table>
+</div>
+<h3 id="delegatedexecutorsconfigchanged"><a class="header" href="#delegatedexecutorsconfigchanged">DelegatedExecutorsConfigChanged</a></h3>
+<p><em>Emitted when a delegated executors configuration is changed.</em></p>
+<pre><code class="language-solidity">event DelegatedExecutorsConfigChanged(
+    uint256 indexed delegatorProfileId,
+    uint256 indexed configNumber,
+    address[] delegatedExecutors,
+    bool[] approvals,
+    uint256 timestamp
+);
+</code></pre>
+<p><strong>Parameters</strong></p>
+<div class="table-wrapper"><table><thead><tr><th>Name</th><th>Type</th><th>Description</th></tr></thead><tbody>
+<tr><td><code>delegatorProfileId</code></td><td><code>uint256</code></td><td>The ID of the profile for which the delegated executor was changed.</td></tr>
+<tr><td><code>configNumber</code></td><td><code>uint256</code></td><td>The number of the configuration where the executor approval state was set.</td></tr>
+<tr><td><code>delegatedExecutors</code></td><td><code>address[]</code></td><td>The array of delegated executors whose approval was set for.</td></tr>
+<tr><td><code>approvals</code></td><td><code>bool[]</code></td><td>The array of booleans indicating the corresponding executor new approval status.</td></tr>
+<tr><td><code>timestamp</code></td><td><code>uint256</code></td><td>The current block timestamp.</td></tr>
+</tbody></table>
+</div>
+<h3 id="delegatedexecutorsconfigapplied"><a class="header" href="#delegatedexecutorsconfigapplied">DelegatedExecutorsConfigApplied</a></h3>
+<p><em>Emitted when a delegated executors configuration is applied.</em></p>
+<pre><code class="language-solidity">event DelegatedExecutorsConfigApplied(
+    uint256 indexed delegatorProfileId, uint256 indexed configNumber, uint256 timestamp
+);
+</code></pre>
+<p><strong>Parameters</strong></p>
+<div class="table-wrapper"><table><thead><tr><th>Name</th><th>Type</th><th>Description</th></tr></thead><tbody>
+<tr><td><code>delegatorProfileId</code></td><td><code>uint256</code></td><td>The ID of the profile applying the configuration.</td></tr>
+<tr><td><code>configNumber</code></td><td><code>uint256</code></td><td>The number of the configuration applied.</td></tr>
+<tr><td><code>timestamp</code></td><td><code>uint256</code></td><td>The current block timestamp.</td></tr>
+</tbody></table>
+</div>
+<h3 id="followmoduleset"><a class="header" href="#followmoduleset">FollowModuleSet</a></h3>
+<p><em>Emitted when a profile's follow module is set.</em></p>
+<pre><code class="language-solidity">event FollowModuleSet(
+    uint256 indexed profileId,
+    address followModule,
+    bytes followModuleInitData,
+    bytes followModuleReturnData,
+    address transactionExecutor,
+    uint256 timestamp
+);
+</code></pre>
+<p><strong>Parameters</strong></p>
+<div class="table-wrapper"><table><thead><tr><th>Name</th><th>Type</th><th>Description</th></tr></thead><tbody>
+<tr><td><code>profileId</code></td><td><code>uint256</code></td><td>The profile's token ID.</td></tr>
+<tr><td><code>followModule</code></td><td><code>address</code></td><td>The profile's newly set follow module. This CAN be the zero address.</td></tr>
+<tr><td><code>followModuleInitData</code></td><td><code>bytes</code></td><td>The data passed to the follow module, if any.</td></tr>
+<tr><td><code>followModuleReturnData</code></td><td><code>bytes</code></td><td>The data returned from the follow module's initialization. This is ABI-encoded and depends on the follow module chosen.</td></tr>
+<tr><td><code>transactionExecutor</code></td><td><code>address</code></td><td>The address of the account that executed this operation.</td></tr>
+<tr><td><code>timestamp</code></td><td><code>uint256</code></td><td>The current block timestamp.</td></tr>
+</tbody></table>
+</div>
+<h3 id="postcreated"><a class="header" href="#postcreated">PostCreated</a></h3>
+<p><em>Emitted when a post is successfully published.</em></p>
+<pre><code class="language-solidity">event PostCreated(
+    Types.PostParams postParams,
+    uint256 indexed pubId,
+    bytes[] actionModulesInitReturnDatas,
+    bytes referenceModuleInitReturnData,
+    address transactionExecutor,
+    uint256 timestamp
+);
+</code></pre>
+<p><strong>Parameters</strong></p>
+<div class="table-wrapper"><table><thead><tr><th>Name</th><th>Type</th><th>Description</th></tr></thead><tbody>
+<tr><td><code>postParams</code></td><td><code>Types.PostParams</code></td><td>The parameters passed to create the post publication.</td></tr>
+<tr><td><code>pubId</code></td><td><code>uint256</code></td><td>The publication ID assigned to the created post.</td></tr>
+<tr><td><code>actionModulesInitReturnDatas</code></td><td><code>bytes[]</code></td><td>The data returned from the action modules' initialization for this given publication. This is ABI-encoded and depends on the action module chosen.</td></tr>
+<tr><td><code>referenceModuleInitReturnData</code></td><td><code>bytes</code></td><td>The data returned from the reference module at initialization. This is ABI-encoded and depends on the reference module chosen.</td></tr>
+<tr><td><code>transactionExecutor</code></td><td><code>address</code></td><td>The address of the account that executed this operation.</td></tr>
+<tr><td><code>timestamp</code></td><td><code>uint256</code></td><td>The current block timestamp.</td></tr>
+</tbody></table>
+</div>
+<h3 id="commentcreated"><a class="header" href="#commentcreated">CommentCreated</a></h3>
+<p><em>Emitted when a comment is successfully published.</em></p>
+<pre><code class="language-solidity">event CommentCreated(
+    Types.CommentParams commentParams,
+    uint256 indexed pubId,
+    bytes referenceModuleReturnData,
+    bytes[] actionModulesInitReturnDatas,
+    bytes referenceModuleInitReturnData,
+    address transactionExecutor,
+    uint256 timestamp
+);
+</code></pre>
+<p><strong>Parameters</strong></p>
+<div class="table-wrapper"><table><thead><tr><th>Name</th><th>Type</th><th>Description</th></tr></thead><tbody>
+<tr><td><code>commentParams</code></td><td><code>Types.CommentParams</code></td><td>The parameters passed to create the comment publication.</td></tr>
+<tr><td><code>pubId</code></td><td><code>uint256</code></td><td>The publication ID assigned to the created comment.</td></tr>
+<tr><td><code>referenceModuleReturnData</code></td><td><code>bytes</code></td><td>The data returned by the commented publication reference module's processComment function, if the commented publication has a reference module set.</td></tr>
+<tr><td><code>actionModulesInitReturnDatas</code></td><td><code>bytes[]</code></td><td>The data returned from the action modules' initialization for this given publication. This is ABI-encoded and depends on the action module chosen.</td></tr>
+<tr><td><code>referenceModuleInitReturnData</code></td><td><code>bytes</code></td><td>The data returned from the reference module at initialization. This is ABI-encoded and depends on the reference module chosen.</td></tr>
+<tr><td><code>transactionExecutor</code></td><td><code>address</code></td><td>The address of the account that executed this operation.</td></tr>
+<tr><td><code>timestamp</code></td><td><code>uint256</code></td><td>The current block timestamp.</td></tr>
+</tbody></table>
+</div>
+<h3 id="mirrorcreated"><a class="header" href="#mirrorcreated">MirrorCreated</a></h3>
+<p><em>Emitted when a mirror is successfully published.</em></p>
+<pre><code class="language-solidity">event MirrorCreated(
+    Types.MirrorParams mirrorParams,
+    uint256 indexed pubId,
+    bytes referenceModuleReturnData,
+    address transactionExecutor,
+    uint256 timestamp
+);
+</code></pre>
+<p><strong>Parameters</strong></p>
+<div class="table-wrapper"><table><thead><tr><th>Name</th><th>Type</th><th>Description</th></tr></thead><tbody>
+<tr><td><code>mirrorParams</code></td><td><code>Types.MirrorParams</code></td><td>The parameters passed to create the mirror publication.</td></tr>
+<tr><td><code>pubId</code></td><td><code>uint256</code></td><td>The publication ID assigned to the created mirror.</td></tr>
+<tr><td><code>referenceModuleReturnData</code></td><td><code>bytes</code></td><td>The data returned by the mirrored publication reference module's processMirror function, if the mirrored publication has a reference module set.</td></tr>
+<tr><td><code>transactionExecutor</code></td><td><code>address</code></td><td>The address of the account that executed this operation.</td></tr>
+<tr><td><code>timestamp</code></td><td><code>uint256</code></td><td>The current block timestamp.</td></tr>
+</tbody></table>
+</div>
+<h3 id="quotecreated"><a class="header" href="#quotecreated">QuoteCreated</a></h3>
+<p><em>Emitted when a quote is successfully published.</em></p>
+<pre><code class="language-solidity">event QuoteCreated(
+    Types.QuoteParams quoteParams,
+    uint256 indexed pubId,
+    bytes referenceModuleReturnData,
+    bytes[] actionModulesInitReturnDatas,
+    bytes referenceModuleInitReturnData,
+    address transactionExecutor,
+    uint256 timestamp
+);
+</code></pre>
+<p><strong>Parameters</strong></p>
+<div class="table-wrapper"><table><thead><tr><th>Name</th><th>Type</th><th>Description</th></tr></thead><tbody>
+<tr><td><code>quoteParams</code></td><td><code>Types.QuoteParams</code></td><td>The parameters passed to create the quote publication.</td></tr>
+<tr><td><code>pubId</code></td><td><code>uint256</code></td><td>The publication ID assigned to the created quote.</td></tr>
+<tr><td><code>referenceModuleReturnData</code></td><td><code>bytes</code></td><td>The data returned by the quoted publication reference module's processQuote function, if the quoted publication has a reference module set.</td></tr>
+<tr><td><code>actionModulesInitReturnDatas</code></td><td><code>bytes[]</code></td><td>The data returned from the action modules' initialization for this given publication. This is ABI-encoded and depends on the action module chosen.</td></tr>
+<tr><td><code>referenceModuleInitReturnData</code></td><td><code>bytes</code></td><td>The data returned from the reference module at initialization. This is ABI-encoded and depends on the reference module chosen.</td></tr>
+<tr><td><code>transactionExecutor</code></td><td><code>address</code></td><td>The address of the account that executed this operation.</td></tr>
+<tr><td><code>timestamp</code></td><td><code>uint256</code></td><td>The current block timestamp.</td></tr>
+</tbody></table>
+</div>
+<h3 id="follownftdeployed"><a class="header" href="#follownftdeployed">FollowNFTDeployed</a></h3>
+<p><em>Emitted when a followNFT clone is deployed using a lazy deployment pattern.</em></p>
+<pre><code class="language-solidity">event FollowNFTDeployed(uint256 indexed profileId, address indexed followNFT, uint256 timestamp);
+</code></pre>
+<p><strong>Parameters</strong></p>
+<div class="table-wrapper"><table><thead><tr><th>Name</th><th>Type</th><th>Description</th></tr></thead><tbody>
+<tr><td><code>profileId</code></td><td><code>uint256</code></td><td>The token ID of the profile to which this followNFT is associated.</td></tr>
+<tr><td><code>followNFT</code></td><td><code>address</code></td><td>The address of the newly deployed followNFT clone.</td></tr>
+<tr><td><code>timestamp</code></td><td><code>uint256</code></td><td>The current block timestamp.</td></tr>
+</tbody></table>
+</div>
+<h3 id="legacycollectnftdeployed"><a class="header" href="#legacycollectnftdeployed">LegacyCollectNFTDeployed</a></h3>
+<p><em>Emitted when a collectNFT clone is deployed using a lazy deployment pattern.</em></p>
+<pre><code class="language-solidity">event LegacyCollectNFTDeployed(
+    uint256 indexed profileId, uint256 indexed pubId, address indexed collectNFT, uint256 timestamp
+);
+</code></pre>
+<p><strong>Parameters</strong></p>
+<div class="table-wrapper"><table><thead><tr><th>Name</th><th>Type</th><th>Description</th></tr></thead><tbody>
+<tr><td><code>profileId</code></td><td><code>uint256</code></td><td>The publisher's profile token ID.</td></tr>
+<tr><td><code>pubId</code></td><td><code>uint256</code></td><td>The publication associated with the newly deployed collectNFT clone's ID.</td></tr>
+<tr><td><code>collectNFT</code></td><td><code>address</code></td><td>The address of the newly deployed collectNFT clone.</td></tr>
+<tr><td><code>timestamp</code></td><td><code>uint256</code></td><td>The current block timestamp.</td></tr>
+</tbody></table>
+</div>
+<h3 id="acted"><a class="header" href="#acted">Acted</a></h3>
+<p><em>Emitted upon a successful action.</em></p>
+<pre><code class="language-solidity">event Acted(
+    Types.PublicationActionParams publicationActionParams,
+    bytes actionModuleReturnData,
+    address transactionExecutor,
+    uint256 timestamp
+);
+</code></pre>
+<p><strong>Parameters</strong></p>
+<div class="table-wrapper"><table><thead><tr><th>Name</th><th>Type</th><th>Description</th></tr></thead><tbody>
+<tr><td><code>publicationActionParams</code></td><td><code>Types.PublicationActionParams</code></td><td>The parameters passed to act on a publication.</td></tr>
+<tr><td><code>actionModuleReturnData</code></td><td><code>bytes</code></td><td>The data returned from the action modules. This is ABI-encoded and the format depends on the action module chosen.</td></tr>
+<tr><td><code>transactionExecutor</code></td><td><code>address</code></td><td>The address of the account that executed this operation.</td></tr>
+<tr><td><code>timestamp</code></td><td><code>uint256</code></td><td>The current block timestamp.</td></tr>
+</tbody></table>
+</div>
+<h3 id="followed"><a class="header" href="#followed">Followed</a></h3>
+<p><em>Emitted upon a successful follow operation.</em></p>
+<pre><code class="language-solidity">event Followed(
+    uint256 indexed followerProfileId,
+    uint256 idOfProfileFollowed,
+    uint256 followTokenIdAssigned,
+    bytes followModuleData,
+    bytes processFollowModuleReturnData,
+    address transactionExecutor,
+    uint256 timestamp
+);
+</code></pre>
+<p><strong>Parameters</strong></p>
+<div class="table-wrapper"><table><thead><tr><th>Name</th><th>Type</th><th>Description</th></tr></thead><tbody>
+<tr><td><code>followerProfileId</code></td><td><code>uint256</code></td><td>The ID of the profile that executed the follow.</td></tr>
+<tr><td><code>idOfProfileFollowed</code></td><td><code>uint256</code></td><td>The ID of the profile that was followed.</td></tr>
+<tr><td><code>followTokenIdAssigned</code></td><td><code>uint256</code></td><td>The ID of the follow token assigned to the follower.</td></tr>
+<tr><td><code>followModuleData</code></td><td><code>bytes</code></td><td>The data to pass to the follow module, if any.</td></tr>
+<tr><td><code>processFollowModuleReturnData</code></td><td><code>bytes</code></td><td>The data returned by the followed profile follow module's processFollow function, if the followed profile has a reference module set.</td></tr>
+<tr><td><code>transactionExecutor</code></td><td><code>address</code></td><td>The address of the account that executed this operation.</td></tr>
+<tr><td><code>timestamp</code></td><td><code>uint256</code></td><td>The timestamp of the follow operation.</td></tr>
+</tbody></table>
+</div>
+<h3 id="unfollowed"><a class="header" href="#unfollowed">Unfollowed</a></h3>
+<p><em>Emitted upon a successful unfollow operation.</em></p>
+<pre><code class="language-solidity">event Unfollowed(
+    uint256 indexed unfollowerProfileId, uint256 idOfProfileUnfollowed, address transactionExecutor, uint256 timestamp
+);
+</code></pre>
+<p><strong>Parameters</strong></p>
+<div class="table-wrapper"><table><thead><tr><th>Name</th><th>Type</th><th>Description</th></tr></thead><tbody>
+<tr><td><code>unfollowerProfileId</code></td><td><code>uint256</code></td><td>The ID of the profile that executed the unfollow.</td></tr>
+<tr><td><code>idOfProfileUnfollowed</code></td><td><code>uint256</code></td><td>The ID of the profile that was unfollowed.</td></tr>
+<tr><td><code>transactionExecutor</code></td><td><code>address</code></td><td>The address of the account that executed this operation.</td></tr>
+<tr><td><code>timestamp</code></td><td><code>uint256</code></td><td>The timestamp of the unfollow operation.</td></tr>
+</tbody></table>
+</div>
+<h3 id="blocked"><a class="header" href="#blocked">Blocked</a></h3>
+<p><em>Emitted upon a successful block, through a block status setting operation.</em></p>
+<pre><code class="language-solidity">event Blocked(uint256 indexed byProfileId, uint256 idOfProfileBlocked, address transactionExecutor, uint256 timestamp);
+</code></pre>
+<p><strong>Parameters</strong></p>
+<div class="table-wrapper"><table><thead><tr><th>Name</th><th>Type</th><th>Description</th></tr></thead><tbody>
+<tr><td><code>byProfileId</code></td><td><code>uint256</code></td><td>The ID of the profile that executed the block status change.</td></tr>
+<tr><td><code>idOfProfileBlocked</code></td><td><code>uint256</code></td><td>The ID of the profile whose block status have been set to blocked.</td></tr>
+<tr><td><code>transactionExecutor</code></td><td><code>address</code></td><td>The address of the account that executed this operation.</td></tr>
+<tr><td><code>timestamp</code></td><td><code>uint256</code></td><td>The timestamp of the block operation.</td></tr>
+</tbody></table>
+</div>
+<h3 id="unblocked"><a class="header" href="#unblocked">Unblocked</a></h3>
+<p><em>Emitted upon a successful unblock, through a block status setting operation.</em></p>
+<pre><code class="language-solidity">event Unblocked(
+    uint256 indexed byProfileId, uint256 idOfProfileUnblocked, address transactionExecutor, uint256 timestamp
+);
+</code></pre>
+<p><strong>Parameters</strong></p>
+<div class="table-wrapper"><table><thead><tr><th>Name</th><th>Type</th><th>Description</th></tr></thead><tbody>
+<tr><td><code>byProfileId</code></td><td><code>uint256</code></td><td>The ID of the profile that executed the block status change.</td></tr>
+<tr><td><code>idOfProfileUnblocked</code></td><td><code>uint256</code></td><td>The ID of the profile whose block status have been set to unblocked.</td></tr>
+<tr><td><code>transactionExecutor</code></td><td><code>address</code></td><td>The address of the account that executed this operation.</td></tr>
+<tr><td><code>timestamp</code></td><td><code>uint256</code></td><td>The timestamp of the unblock operation.</td></tr>
+</tbody></table>
+</div>
+<h3 id="collectnfttransferred"><a class="header" href="#collectnfttransferred">CollectNFTTransferred</a></h3>
+<p><em>Emitted via callback when a collectNFT is transferred.</em></p>
+<pre><code class="language-solidity">event CollectNFTTransferred(
+    uint256 indexed profileId,
+    uint256 indexed pubId,
+    uint256 indexed collectNFTId,
+    address from,
+    address to,
+    uint256 timestamp
+);
+</code></pre>
+<p><strong>Parameters</strong></p>
+<div class="table-wrapper"><table><thead><tr><th>Name</th><th>Type</th><th>Description</th></tr></thead><tbody>
+<tr><td><code>profileId</code></td><td><code>uint256</code></td><td>The token ID of the profile associated with the collectNFT being transferred.</td></tr>
+<tr><td><code>pubId</code></td><td><code>uint256</code></td><td>The publication ID associated with the collectNFT being transferred.</td></tr>
+<tr><td><code>collectNFTId</code></td><td><code>uint256</code></td><td>The collectNFT being transferred's token ID.</td></tr>
+<tr><td><code>from</code></td><td><code>address</code></td><td>The address the collectNFT is being transferred from.</td></tr>
+<tr><td><code>to</code></td><td><code>address</code></td><td>The address the collectNFT is being transferred to.</td></tr>
+<tr><td><code>timestamp</code></td><td><code>uint256</code></td><td>The current block timestamp.</td></tr>
+</tbody></table>
+</div>
+<h3 id="treasuryset"><a class="header" href="#treasuryset">TreasurySet</a></h3>
+<p>Emitted when the treasury address is set.</p>
+<pre><code class="language-solidity">event TreasurySet(address indexed prevTreasury, address indexed newTreasury, uint256 timestamp);
+</code></pre>
+<p><strong>Parameters</strong></p>
+<div class="table-wrapper"><table><thead><tr><th>Name</th><th>Type</th><th>Description</th></tr></thead><tbody>
+<tr><td><code>prevTreasury</code></td><td><code>address</code></td><td>The previous treasury address.</td></tr>
+<tr><td><code>newTreasury</code></td><td><code>address</code></td><td>The new treasury address set.</td></tr>
+<tr><td><code>timestamp</code></td><td><code>uint256</code></td><td>The current block timestamp.</td></tr>
+</tbody></table>
+</div>
+<h3 id="treasuryfeeset"><a class="header" href="#treasuryfeeset">TreasuryFeeSet</a></h3>
+<p>Emitted when the treasury fee is set.</p>
+<pre><code class="language-solidity">event TreasuryFeeSet(uint16 indexed prevTreasuryFee, uint16 indexed newTreasuryFee, uint256 timestamp);
+</code></pre>
+<p><strong>Parameters</strong></p>
+<div class="table-wrapper"><table><thead><tr><th>Name</th><th>Type</th><th>Description</th></tr></thead><tbody>
+<tr><td><code>prevTreasuryFee</code></td><td><code>uint16</code></td><td>The previous treasury fee in BPS.</td></tr>
+<tr><td><code>newTreasuryFee</code></td><td><code>uint16</code></td><td>The new treasury fee in BPS.</td></tr>
+<tr><td><code>timestamp</code></td><td><code>uint256</code></td><td>The current block timestamp.</td></tr>
+</tbody></table>
+</div>
+<h3 id="profilemetadataset"><a class="header" href="#profilemetadataset">ProfileMetadataSet</a></h3>
+<p><em>Emitted when the metadata associated with a profile is set in the <code>DiGiPeriphery</code>.</em></p>
+<pre><code class="language-solidity">event ProfileMetadataSet(uint256 indexed profileId, string metadata, address transactionExecutor, uint256 timestamp);
+</code></pre>
+<p><strong>Parameters</strong></p>
+<div class="table-wrapper"><table><thead><tr><th>Name</th><th>Type</th><th>Description</th></tr></thead><tbody>
+<tr><td><code>profileId</code></td><td><code>uint256</code></td><td>The profile ID the metadata is set for.</td></tr>
+<tr><td><code>metadata</code></td><td><code>string</code></td><td>The metadata set for the profile and user.</td></tr>
+<tr><td><code>transactionExecutor</code></td><td><code>address</code></td><td>The address of the account that executed this operation.</td></tr>
+<tr><td><code>timestamp</code></td><td><code>uint256</code></td><td>The current block timestamp.</td></tr>
+</tbody></table>
+</div>
+<h3 id="tokenguardianstatechanged"><a class="header" href="#tokenguardianstatechanged">TokenGuardianStateChanged</a></h3>
+<p><em>Emitted when an address' Profile Guardian state change is triggered.</em></p>
+<pre><code class="language-solidity">event TokenGuardianStateChanged(
+    address indexed wallet, bool indexed enabled, uint256 tokenGuardianDisablingTimestamp, uint256 timestamp
+);
+</code></pre>
+<p><strong>Parameters</strong></p>
+<div class="table-wrapper"><table><thead><tr><th>Name</th><th>Type</th><th>Description</th></tr></thead><tbody>
+<tr><td><code>wallet</code></td><td><code>address</code></td><td>The address whose Token Guardian state change is being triggered.</td></tr>
+<tr><td><code>enabled</code></td><td><code>bool</code></td><td>True if the Token Guardian is being enabled, false if it is being disabled.</td></tr>
+<tr><td><code>tokenGuardianDisablingTimestamp</code></td><td><code>uint256</code></td><td>The UNIX timestamp when disabling the Token Guardian will take effect, if disabling it. Zero if the protection is being enabled.</td></tr>
+<tr><td><code>timestamp</code></td><td><code>uint256</code></td><td>The UNIX timestamp of the change being triggered.</td></tr>
+</tbody></table>
+</div>
+<h3 id="nonceupdated"><a class="header" href="#nonceupdated">NonceUpdated</a></h3>
+<p><em>Emitted when a signer's nonce is used and, as a consequence, the next available nonce is updated.</em></p>
+<pre><code class="language-solidity">event NonceUpdated(address indexed signer, uint256 nonce, uint256 timestamp);
+</code></pre>
+<p><strong>Parameters</strong></p>
+<div class="table-wrapper"><table><thead><tr><th>Name</th><th>Type</th><th>Description</th></tr></thead><tbody>
+<tr><td><code>signer</code></td><td><code>address</code></td><td>The signer whose next available nonce was updated.</td></tr>
+<tr><td><code>nonce</code></td><td><code>uint256</code></td><td>The next available nonce that can be used to execute a meta-tx successfully.</td></tr>
+<tr><td><code>timestamp</code></td><td><code>uint256</code></td><td>The UNIX timestamp of the nonce being used.</td></tr>
+</tbody></table>
+</div>
+<h3 id="batchmetadataupdate"><a class="header" href="#batchmetadataupdate">BatchMetadataUpdate</a></h3>
+<p><em>Emitted when a collection's token URI is updated.</em></p>
+<pre><code class="language-solidity">event BatchMetadataUpdate(uint256 fromTokenId, uint256 toTokenId);
+</code></pre>
+<p><strong>Parameters</strong></p>
+<div class="table-wrapper"><table><thead><tr><th>Name</th><th>Type</th><th>Description</th></tr></thead><tbody>
+<tr><td><code>fromTokenId</code></td><td><code>uint256</code></td><td>The ID of the smallest token that requires its token URI to be refreshed.</td></tr>
+<tr><td><code>toTokenId</code></td><td><code>uint256</code></td><td>The ID of the biggest token that requires its token URI to be refreshed. Max uint256 to refresh all of them.</td></tr>
+</tbody></table>
+</div>
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../../../../contracts/libraries/constants/Errors.sol/library.Errors.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="../../../../contracts/libraries/constants/Typehash.sol/library.Typehash.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../../../../contracts/libraries/constants/Errors.sol/library.Errors.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="../../../../contracts/libraries/constants/Typehash.sol/library.Typehash.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../../../../elasticlunr.min.js"></script>
+        <script src="../../../../mark.min.js"></script>
+        <script src="../../../../searcher.js"></script>
+
+        <script src="../../../../clipboard.min.js"></script>
+        <script src="../../../../highlight.js"></script>
+        <script src="../../../../book.js"></script>
+
+        <!-- Custom JS scripts -->
+        <script src="../../../../solidity.min.js"></script>
+
+
+    </div>
+    </body>
+</html>

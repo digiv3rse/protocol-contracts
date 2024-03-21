@@ -1,5 +1,5 @@
 # CollectPublicationAction
-[Git Source](https://github.com/digiv3rse/core-contracts/blob/5454b58664fab805b6888a68ff40915d251f32f3/contracts/modules/act/collect/CollectPublicationAction.sol)
+[Git Source](https://github.com/digiv3rse/protocol-contracts/blob/0d518167a484d4368bad0990424be098fe779fa4/contracts/modules/act/collect/CollectPublicationAction.sol)
 
 **Inherits:**
 [DiGiModuleMetadataInitializable](/contracts/modules/DiGiModuleMetadataInitializable.sol/contract.DiGiModuleMetadataInitializable.md), [HubRestricted](/contracts/base/HubRestricted.sol/abstract.HubRestricted.md), [IPublicationActionModule](/contracts/interfaces/IPublicationActionModule.sol/interface.IPublicationActionModule.md)

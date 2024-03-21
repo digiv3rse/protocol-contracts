@@ -1,7 +1,7 @@
 # IDiGiHub
-[Git Source](https://github.com/digiv3rse/core-contracts/blob/5454b58664fab805b6888a68ff40915d251f32f3/contracts/interfaces/IDiGiHub.sol)
+[Git Source](https://github.com/digiv3rse/protocol-contracts/blob/0d518167a484d4368bad0990424be098fe779fa4/contracts/interfaces/IDiGiHub.sol)
 
 **Inherits:**
-[IDiGiProfiles](/contracts/interfaces/IDiGiProfiles.sol/interface.IDiGiProfiles.md), [IDiGiProtocol](/contracts/interfaces/IDiGiProtocol.sol/interface.IDiGiProtocol.md), [IDiGiGovernable](/contracts/interfaces/IDiGiGovernable.sol/interface.IDiGiGovernable.md), [IDiGiHubEventHooks](/contracts/interfaces/IDiGiHubEventHooks.sol/interface.IDiGiHubEventHooks.md), [IDiGiImplGetters](/contracts/interfaces/IDiGiImplGetters.sol/interface.IDiGiImplGetters.md), [IDiGiVersion](/contracts/interfaces/IDiGiVersion.sol/interface.IDiGiVersion.md)
+[IDiGiProfiles](/contracts/misc/PermissionlessCreator.sol/interface.IDiGiProfiles.md), [IDiGiProtocol](/contracts/misc/PermissionlessCreator.sol/interface.IDiGiProtocol.md), [IDiGiGovernable](/contracts/misc/PermissionlessCreator.sol/interface.IDiGiGovernable.md), [IDiGiHubEventHooks](/contracts/misc/PermissionlessCreator.sol/interface.IDiGiHubEventHooks.md), [IDiGiImplGetters](/contracts/misc/PermissionlessCreator.sol/interface.IDiGiImplGetters.md), [IDiGiVersion](/contracts/misc/PermissionlessCreator.sol/interface.IDiGiVersion.md)
 
 

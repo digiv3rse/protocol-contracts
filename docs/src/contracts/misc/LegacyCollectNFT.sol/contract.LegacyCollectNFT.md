@@ -1,5 +1,5 @@
 # LegacyCollectNFT
-[Git Source](https://github.com/digiv3rse/core-contracts/blob/5454b58664fab805b6888a68ff40915d251f32f3/contracts/misc/LegacyCollectNFT.sol)
+[Git Source](https://github.com/digiv3rse/protocol-contracts/blob/0d518167a484d4368bad0990424be098fe779fa4/contracts/misc/LegacyCollectNFT.sol)
 
 **Inherits:**
 [DiGiBaseERC721](/contracts/base/DiGiBaseERC721.sol/abstract.DiGiBaseERC721.md), [ERC2981CollectionRoyalties](/contracts/base/ERC2981CollectionRoyalties.sol/abstract.ERC2981CollectionRoyalties.md), [ICollectNFT](/contracts/interfaces/ICollectNFT.sol/interface.ICollectNFT.md)
@@ -138,7 +138,7 @@ function name() public view override returns (string memory);
 
 ### symbol
 
-*See [IERC721Metadata-symbol](/contracts/namespaces/DiGiHandles.sol/contract.DiGiHandles.md#symbol).*
+*See [IERC721Metadata-symbol](/contracts/misc/PermissionlessCreator.sol/interface.IERC721Metadata.md#symbol).*
 
 
 ```solidity
@@ -147,7 +147,7 @@ function symbol() public pure override returns (string memory);
 
 ### supportsInterface
 
-*See [IERC165-supportsInterface](/contracts/namespaces/DiGiHandles.sol/contract.DiGiHandles.md#supportsinterface).*
+*See [IERC165-supportsInterface](/contracts/misc/PermissionlessCreator.sol/interface.IERC165.md#supportsinterface).*
 
 
 ```solidity

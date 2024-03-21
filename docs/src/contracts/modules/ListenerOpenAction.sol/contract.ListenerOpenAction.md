@@ -1,5 +1,5 @@
 # ListenerOpenAction
-[Git Source](https://github.com/digiv3rse/core-contracts/blob/5454b58664fab805b6888a68ff40915d251f32f3/contracts/modules/ListenerOpenAction.sol)
+[Git Source](https://github.com/digiv3rse/protocol-contracts/blob/0d518167a484d4368bad0990424be098fe779fa4/contracts/modules/ListenerOpenAction.sol)
 
 **Inherits:**
 [HubRestricted](/contracts/base/HubRestricted.sol/abstract.HubRestricted.md), [IDiGiModule](/contracts/modules/interfaces/IDiGiModule.sol/interface.IDiGiModule.md), [IPublicationActionModule](/contracts/interfaces/IPublicationActionModule.sol/interface.IPublicationActionModule.md)

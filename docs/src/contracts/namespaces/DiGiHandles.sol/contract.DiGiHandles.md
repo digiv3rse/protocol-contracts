@@ -1,8 +1,8 @@
 # DiGiHandles
-[Git Source](https://github.com/digiv3rse/core-contracts/blob/5454b58664fab805b6888a68ff40915d251f32f3/contracts/namespaces/DiGiHandles.sol)
+[Git Source](https://github.com/digiv3rse/protocol-contracts/blob/0d518167a484d4368bad0990424be098fe779fa4/contracts/namespaces/DiGiHandles.sol)
 
 **Inherits:**
-ERC721, [ERC2981CollectionRoyalties](/contracts/base/ERC2981CollectionRoyalties.sol/abstract.ERC2981CollectionRoyalties.md), [ImmutableOwnable](/contracts/misc/ImmutableOwnable.sol/contract.ImmutableOwnable.md), [IDiGiHandles](/contracts/interfaces/IDiGiHandles.sol/interface.IDiGiHandles.md)
+ERC721, [ERC2981CollectionRoyalties](/contracts/base/ERC2981CollectionRoyalties.sol/abstract.ERC2981CollectionRoyalties.md), [ImmutableOwnable](/contracts/misc/ImmutableOwnable.sol/contract.ImmutableOwnable.md), [IDiGiHandles](/contracts/misc/PermissionlessCreator.sol/interface.IDiGiHandles.md)
 
 A handle is defined as a local name inside a namespace context. A handle is represented as the local name with its
 namespace applied as a prefix, using the slash symbol as separator.

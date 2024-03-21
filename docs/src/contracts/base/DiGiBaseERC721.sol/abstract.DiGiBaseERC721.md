@@ -1,8 +1,8 @@
 # DiGiBaseERC721
-[Git Source](https://github.com/digiv3rse/core-contracts/blob/5454b58664fab805b6888a68ff40915d251f32f3/contracts/base/DiGiBaseERC721.sol)
+[Git Source](https://github.com/digiv3rse/protocol-contracts/blob/0d518167a484d4368bad0990424be098fe779fa4/contracts/base/DiGiBaseERC721.sol)
 
 **Inherits:**
-ERC165, [IDiGiERC721](/contracts/interfaces/IDiGiERC721.sol/interface.IDiGiERC721.md)
+ERC165, [IDiGiERC721](/contracts/misc/PermissionlessCreator.sol/interface.IDiGiERC721.md)
 
 *Implementation of https://eips.ethereum.org/EIPS/eip-721[ERC721] Non-Fungible Token Standard, including
 the Metadata extension, but not including the Enumerable extension, which is available separately as
