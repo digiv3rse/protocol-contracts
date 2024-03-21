@@ -16,22 +16,22 @@
 
 .ayu {
     --bg: hsl(210, 25%, 8%);
-    --fg: #c5c5c5;
+    --fg: #e1dede;
 
     --sidebar-bg: #14191f;
     --sidebar-fg: #c8c9db;
     --sidebar-non-existant: #5c6773;
-    --sidebar-active: #ffb454;
-    --sidebar-spacer: #2d334f;
+    --sidebar-active: #1d97ef;
+    --sidebar-spacer: #442d4f;
 
     --scrollbar: var(--sidebar-fg);
 
     --icons: #737480;
     --icons-hover: #b7b9cc;
 
-    --links: #0096cf;
+    --links: #cf009b;
 
-    --inline-code-color: #ffb454;
+    --inline-code-color: #ff5487;
 
     --theme-popup-bg: #14191f;
     --theme-popup-border: #5c6773;
@@ -40,7 +40,7 @@
     --quote-bg: hsl(226, 15%, 17%);
     --quote-border: hsl(226, 15%, 22%);
 
-    --warning-border: #ff8e00;
+    --warning-border: #ff0062;
 
     --table-border-color: hsl(210, 25%, 13%);
     --table-header-bg: hsl(210, 25%, 28%);

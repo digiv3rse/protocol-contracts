@@ -6,8 +6,8 @@ Original by Dempfi (https://github.com/dempfi/ayu)
 .hljs {
   display: block;
   overflow-x: auto;
-  background: #191f26;
-  color: #e6e1cf;
+  background: #242f3c;
+  color: #cfe5e6;
 }
 
 .hljs-comment,
@@ -24,7 +24,7 @@ Original by Dempfi (https://github.com/dempfi/ayu)
 .hljs-link,
 .hljs-selector-id,
 .hljs-selector-class {
-  color: #ff7733;
+  color: #ff33cf;
 }
 
 .hljs-number,
@@ -33,32 +33,32 @@ Original by Dempfi (https://github.com/dempfi/ayu)
 .hljs-literal,
 .hljs-type,
 .hljs-params {
-  color: #ffee99;
+  color: #99ffa2;
 }
 
 .hljs-string,
 .hljs-bullet {
-  color: #b8cc52;
+  color: #43d16d;
 }
 
 .hljs-title,
 .hljs-built_in,
 .hljs-section {
-  color: #ffb454;
+  color: #90ff54;
 }
 
 .hljs-keyword,
 .hljs-selector-tag,
 .hljs-symbol {
-  color: #ff7733;
+  color: #d633ff;
 }
 
 .hljs-name {
-    color: #36a3d9;
+    color: #1cbdf3;
 }
 
 .hljs-tag {
-    color: #00568d;
+    color: #2745f3;
 }
 
 .hljs-emphasis {
@@ -70,9 +70,9 @@ Original by Dempfi (https://github.com/dempfi/ayu)
 }
 
 .hljs-addition {
-  color: #91b362;
+  color: #46eaef;
 }
 
 .hljs-deletion {
-  color: #d96c75;
+  color: #c01616;
 }
